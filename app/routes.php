@@ -15,3 +15,9 @@ Route::get('/', function()
 {
 	return View::make('homepage');
 });
+
+
+Route::get('/admin', function()
+{
+	return View::make('admin.main');
+});
