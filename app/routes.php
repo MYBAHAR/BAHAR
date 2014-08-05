@@ -16,7 +16,13 @@ Route::get('/', function()
 	return View::make('homepage');
 });
 
+Route::get('/user/register', 'HomeController@getRegister');
+Route::post('/user/register', 'HomeController@postRegister');
 
+Route::get('/user/login', 'HomeController@getLogin');
+Route::post('/user/login', 'HomeController@postLogin');
+
+Route::get('/user/logout', 'HomeController@logout');
 Route::get('/admin', function()
 {
 	return View::make('admin.main');

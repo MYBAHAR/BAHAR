@@ -6,7 +6,7 @@
 			<h1>Welcome to BAHAR!</h1>
 			<p>eLearning made easy...<p>
 			<p>
-				<a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#signUpModal">Start learning now</a>
+				<a href="/user/register" class="btn btn-primary btn-lg" data-toggle="" data-target="#signUpModal">Start learning now</a>
 			</p>
 			<div class="row">
 				<h2></h2>
