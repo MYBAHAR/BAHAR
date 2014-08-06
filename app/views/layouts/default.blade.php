@@ -28,7 +28,7 @@
   <body>
     <nav class="navbar navbar-default" role="navigation">
     	<div class="container">
-	    	<a class="navbar-brand" href="#">BAHAR</a>
+	    	<a class="navbar-brand" href="/">BAHAR</a>
 	    	<ul class="nav navbar-nav">
 	    		<li class="">
 	    			<a href="#">Teach</a>

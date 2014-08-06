@@ -11,18 +11,24 @@
 |
 */
 
+// Load the homepage
 Route::get('/', function()
 {
 	return View::make('homepage');
 });
 
-Route::get('/user/register', 'HomeController@getRegister');
-Route::post('/user/register', 'HomeController@postRegister');
+// User registration to the system
+Route::get('/user/register', 'UserController@getRegister');
+Route::post('/user/register', 'UserController@postRegister');
 
-Route::get('/user/login', 'HomeController@getLogin');
-Route::post('/user/login', 'HomeController@postLogin');
+// User login into the system.
+Route::get('/user/login', 'UserController@getLogin');
+Route::post('/user/login', 'UserController@postLogin');
 
-Route::get('/user/logout', 'HomeController@logout');
+// User logout
+Route::get('/user/logout', 'UserController@logout');
+
+// Load admin dashboard
 Route::get('/admin', function()
 {
 	return View::make('admin.main');
