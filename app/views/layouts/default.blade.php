@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>BAHAR</title>
+    <title>BAHAR | Elearning Made Easy</title>
 
     <!-- Bootstrap -->
 		{{ HTML::style('css/bootstrap.min.css'); }}
