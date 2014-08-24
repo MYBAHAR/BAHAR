@@ -27,29 +27,37 @@
   </head>
   <body>
 	<div class="top-image">
-		<div id="intro-carousel" class="carousel slide" data-ride="carousel">
-		    <div class="carousel-inner text-center">
-		        <div class="item active">
-		            <i class="fa fa-road"></i>
-                    <h1>Take a course</h1>
-                    <p>Feel free to browse through our wide range of courses and find your favourite course.</p>
-                    <p><a class="btn btn-primary" href="#" role="button">Learn More</a></p>
-		        </div>
-		        <div class="item">
-		            <i class="fa fa-graduation-cap"></i>	                
-                    <h1>Graduate</h1>
-                    <p>After finishing your course, you'll receive a test. Based apon your scores in the exam you'll receive a certificate showing that you've successfully finished the course.</p>
-                    <p><a class="btn btn-primary" href="#" role="button">Learn more</a></p>
-		        </div>
-		        <div class="item">
-		            <i class="fa fa-briefcase"></i>
-                    <h1>Find a job</h1>
-                    <p>Our courses are thought by the best and most exprienced instructors around the world. Thus after graduating from our courses you'd have enough knowledge and skills to easily be hired!</p>
-                    <p><a class="btn btn-primary" href="#" role="button">Learn More</a></p>
-		        </div>
-		    </div>
-		    <a class="left carousel-control" href="#intro-carousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-		    <a class="right carousel-control" href="#intro-carousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-8 col-sm-offset-2">
+					<!-- Carousel Start -->
+					<div id="intro-carousel" class="carousel slide" data-ride="carousel">
+					    <div class="carousel-inner text-center">
+					        <div class="item active">
+					            <i class="fa fa-2x fa-road"></i>
+			                    <h1>Take a course</h1>
+			                    <p>Feel free to browse through our wide range of courses and find your favourite course.</p>
+			                    <p><a class="btn btn-primary" href="#" role="button">Learn More</a></p>
+					        </div>
+					        <div class="item">
+					            <i class="fa fa-2x fa-graduation-cap"></i>	                
+			                    <h1>Graduate</h1>
+			                    <p>After finishing your course, you'll receive a test. Based apon your scores in the exam you'll receive a certificate showing that you've successfully finished the course.</p>
+			                    <p><a class="btn btn-primary" href="#" role="button">Learn more</a></p>
+					        </div>
+					        <div class="item">
+					            <i class="fa fa-2x fa-briefcase"></i>
+			                    <h1>Find a job</h1>
+			                    <p>Our courses are thought by the best and most exprienced instructors around the world. Thus after graduating from our courses you'd have enough knowledge and skills to easily be hired!</p>
+			                    <p><a class="btn btn-primary" href="#" role="button">Learn More</a></p>
+					        </div>
+					    </div>
+					    <a class="left carousel-control" href="#intro-carousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+					    <a class="right carousel-control" href="#intro-carousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+					</div>
+					<!-- Carousel End -->
+				</div>
+			</div>
 		</div>
 	</div>
     
