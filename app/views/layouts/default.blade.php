@@ -168,6 +168,64 @@
     
     @yield('content')
   	
+  	<!-- Footer -->
+	<div class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-8 col-sm-offset-2 text-center">
+					<p class="lead">Follwo Us</p>
+					<i class="fa social fa-facebook"></i>
+					<i class="fa social fa-twitter"></i>
+					<i class="fa social fa-google-plus"></i>
+					<i class="fa social fa-youtube"></i>
+
+					<div class="row text-left top-margin">
+						<div class="col-sm-4">
+							<h4>BAHAR</h4>
+							<ul>
+								<li><a href="#">About</a></li>
+								<li><a href="#">Contact</a></li>
+								<li><a href="#">Careers</a></li>
+							</ul>
+						</div>
+						<div class="col-sm-4">
+							<h4>Contribure</h4>
+							<ul>
+								<li><a href="#">Teach</a></li>
+								<li><a href="#">Suggest courses</a></li>
+								<li><a href="#">Partners</a></li>
+							</ul>
+						</div>
+						<div class="col-sm-4">
+							<h4>Contribute</h4>
+							<ul>
+								<li><a href="#">Blog</a></li>
+								<li><a href="#">Meetups</a></li>
+								<li><a href="#">News & Media</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr style="background-color:black;height:1px" />
+			<div class="row">
+				<div class="col-sm-6">
+				<p>
+					<a href="#">Privacy Policy</a> |
+					<a href="#">Terms</a> |
+					<a href="#">Help</a> |
+				</p>
+				</div>
+				<div class="col-sm-6 text-right">				
+				<p>
+					&copy; Copyright 2014- BAHAR Organization <br/>
+					All Rights Reserved
+				</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Footer End -->
 
   	<!-- Modal-Hamid -->
 	<div class="modal fade" id="modal-in">	
