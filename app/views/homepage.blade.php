@@ -1,6 +1,7 @@
 @extends('layouts.default')
 
 @section('content')
+	<!-- Introductory -->
 	<div class="introductory">
 		<div class="container">
 			<div class="row">
@@ -26,23 +27,24 @@
 			</div>
 		</div>
 	</div>
+	<!-- End Introductory -->
 	
 	<!-- Why BAHAR? -->
 	<div class="container">
 		<div class="row text-center">
 			<h1 class="heading">Why BAHAR?</h1>
 			<p>We have a handful of reasons for you, but BAHAR users say these</p>
-			<div class="col-sm-4">
+			<div class="col-sm-4 top-margin">
 				<i class="fa fa-group fa-2x"></i>
 				<h3>World wide users</h3>
 				<p>With BAHAR, you'll join a community of thousands of students and instructors</p>
 			</div>
-			<div class="col-sm-4">
+			<div class="col-sm-4 top-margin">
 				<i class="fa fa-child fa-2x"></i>
 				<h3>Access anywhere, anytime</h3>
 				<p>Either if you are in United States or Afghanistan, it makes no difference. You have access anytime anywhere!</p>
 			</div>
-			<div class="col-sm-4">
+			<div class="col-sm-4 top-margin">
 				<i class="fa fa-mobile fa-2x"></i>
 				<h3>Use BAHAR on any device</h3>
 				<p>Whether if you are a tablet user, mobile, iphone or PC. Don't worry BAHAR is available on all those devices</p>
@@ -59,35 +61,44 @@
 					<h1 class="text-center heading">Featured Courses</h1>
 					<p class="text-center">Courses that are developed by experts and are suggested by BAHAR</p>
 
-					<div class="row course-holder">
-						<div class="col-sm-4">
+					<div class="row course-holder bottom-margin">
+						<div class="col-sm-4 top-margin">
 							<div class="image">
-								<a href="#"><img src="{{asset('images/courses/1.jpg')}}" title="Principles of computer programing" class="img-responsive"></a>
-								<span class="price free">Free</span>
+								<a href="#">
+									<img src="{{asset('images/courses/1.jpg')}}" title="Principles of computer programing" class="img-responsive">
+									<span class="price free">Free</span>
+								</a>
 							</div>
 							<h4>Principles of computer programing</h4>
 							<p>By Hamid Reza Sepehr</p>
 							<p>August 2014</p>
 						</div>
-						<div class="col-sm-4">
+						<div class="col-sm-4 top-margin">
 							<div class="image">
-								<a href="#"><img src="{{asset('images/courses/2.jpg')}}" title="Entreprenurship" class="img-responsive"></a>
-								<span class="price nofree">10$</span>
+								<a href="#">
+									<img src="{{asset('images/courses/2.jpg')}}" title="Entreprenurship" class="img-responsive">
+									<span class="price nofree">10$</span>
+								</a>
 							</div>
 							<h4>Entreprenurship</h4>
 							<p>By Murtaza Zargar</p>
 							<p>March 2014</p>
 						</div>
-						<div class="col-sm-4">
+						<div class="col-sm-4 top-margin">
 							<div class="image">
-								<a href="#"><img src="{{asset('images/courses/3.jpg')}}" title="Effective time management" class="img-responsive"></a>
-								<span class="price free">Free</span>
+								<a href="#">
+									<img src="{{asset('images/courses/3.jpg')}}" title="Effective time management" class="img-responsive">
+									<span class="price free">Free</span>
+								</a>
 							</div>
 							<h4>Effective time management</h4>
 							<p>By Mustafa Aloko</p>
 							<p>June 2014</p>
 						</div>
 					</div>
+					<p class="text-center">
+						<a href="#" class="btn btn-warning">More Courses</a>
+					</p>
 				</div>
 			</div>
 		</div>
@@ -109,7 +120,7 @@
 					    </ol>
 					    <div class="carousel-inner text-center">
 					        <div class="item active">							                    
-			                    <p><i class="fa fa-quote-left fa-2x"></i> BAHAR has extremely changed my life, without it I would never be able to reach here. I always feel indebted to BAHAR! <i class="fa fa-quote-right fa-2x"></i></p>
+			                    <p><i class="fa fa-quote-left fa-lg"></i> BAHAR has extremely changed my life, without it I would never be able to reach here. I always feel indebted to BAHAR! <i class="fa fa-quote-right fa-lg"></i></p>
 
 								<p class="text-center">
 									<img src="{{asset('images/testimonials/1.jpg')}}" class="testimonials"> 
@@ -119,7 +130,7 @@
 
 					        <div class="item">
 					         
-								<p><i class="fa fa-quote-left fa-2x"></i> It's <strong>Awesome</strong> when you've just learned your favourite course by the world's most eminent instructors! <i class="fa fa-quote-right fa-2x"></i></p>
+								<p><i class="fa fa-quote-left fa-lg"></i> It's <strong>Awesome</strong> when you've just learned your favourite course by the world's most eminent instructors! <i class="fa fa-quote-right fa-lg"></i></p>
 
 									<p class="text-center">
 										<img src="{{asset('images/testimonials/2.jpg')}}" class="testimonials"> 
@@ -130,7 +141,7 @@
 
 					        <div class="item">
 
-				                    <p><i class="fa fa-quote-left fa-2x"></i> My life has been great since, I first met BAHAR! <i class="fa fa-quote-right fa-2x"></i></p>
+				                    <p><i class="fa fa-quote-left fa-lg"></i> My life has been great since, I first met BAHAR! <i class="fa fa-quote-right fa-lg"></i></p>
 
 									<p class="text-center">
 										<img src="{{asset('images/testimonials/3.jpg')}}" class="testimonials"> 
@@ -145,6 +156,32 @@
 		</div>
 	</div>
 	<!-- End testimonials -->
+
+	<!-- Partners -->
+	<div class="partners">
+		<div class="container">
+			<div class="row text-center">
+				<h1 class="heading">Our Partners</h1>
+				<p>We have partnership with the world's top Institutes</p>
+				<div class="col-sm-4">
+					<a href="#" target="_blank">
+						<img src="{{asset('images/partners/1.png')}}" title="Partner">
+					</a>
+				</div>
+				<div class="col-sm-4">
+					<a href="#" target="_blank">
+						<img src="{{asset('images/partners/2.png')}}" title="Partner">
+					</a>
+				</div>
+				<div class="col-sm-4">
+					<a href="#" target="_blank">
+						<img src="{{asset('images/partners/3.png')}}" title="Partner">
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Partners End -->
 
 	<!-- Footer -->
 	<div class="footer">
@@ -185,7 +222,7 @@
 					</div>
 				</div>
 			</div>
-			<hr style="border:0.5px solid black;" />
+			<hr style="background-color:black;height:1px" />
 			<div class="row">
 				<div class="col-sm-6">
 				<p>

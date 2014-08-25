@@ -7,17 +7,28 @@
 	//height: 683px;
 }
 
-.nav-holder {
-	position: absolute;
-	top: 20px;
+.menubar {
+	//background-color: #ebebeb;
+	position: fixed;
+	width: 100%;
+	z-index: 9999999;
+	top: 0px;
+	color: black;
 }
+
+.menubar .dropdown {display: inline;}
+.menubar button.dropdown-toggle {background-color: transparent;}
+.menubar h1 {margin: 0px;}
+.menubar a {color: black;}
 
 div.top-image .carousel-control.right {background-image: none;}
 div.top-image .carousel-control.left {background-image: none;}
 
 div#intro-carousel {margin: 30% 0px;}
-div.item  {padding: 0px 100px;}
 
+
+div.item  {padding: 0px 100px;}
+.car-arrow {position: absolute;top: 50%;border: 2px solid white;padding: 0.5em;border-radius: 50px;}
 
 div.introductory {
 	background-color: yellow;
@@ -27,6 +38,7 @@ div.introductory {
 h1.heading {
 	border-bottom: 1px dashed black;
 	padding-bottom:7px;
+	margin-top: 2em;
 
 }
 
@@ -105,8 +117,30 @@ i.social {
 i.social:hover {
 	background-color: #890606;
 	cursor: pointer;
+	color: white;
 }
 
 div.footer ul {
 	padding-left: 15px;
 }
+
+.partners {
+	background-color: #00bff3;
+	margin: 2em 0px;
+	padding:1em 0px;
+}
+
+#modal-in .glyphicon {top: 0px;}
+#modal-in .nav-tabs>li {width:50%;}
+#modal-in .nav-tabs>li.active a {background-color: white;}
+#modal-in .nav-tabs>li a {background-color: #ebebeb;border:0px;margin: 0px;padding: 25px;}
+#modal-in .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+	border: 0px !important;
+}
+#modal-in .nav-tabs {border-bottom: 0px;}
+#modal-in .modal-content {box-shadow: none !important;-webkit-box-shadow:none !important;border: 0px !important;}
+
+#modal-in {top: 150px;}
+
+.top-margin {margin-top: 3em;}
+.bottom-margin {margin-bottom: 2em;}

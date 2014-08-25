@@ -26,6 +26,7 @@
     <![endif]-->
   </head>
   <body>
+  	<!-- Image holder -->
 	<div class="top-image">
 		<div class="container">
 			<div class="row">
@@ -52,84 +53,197 @@
 			                    <p><a class="btn btn-primary" href="#" role="button">Learn More</a></p>
 					        </div>
 					    </div>
-					    <a class="left carousel-control" href="#intro-carousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-					    <a class="right carousel-control" href="#intro-carousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+					    <a class="left carousel-control" href="#intro-carousel" data-slide="prev"><i class="fa fa-long-arrow-left car-arrow"></i></a>
+					    <a class="right carousel-control" href="#intro-carousel" data-slide="next"><i class="fa fa-long-arrow-right car-arrow"></i></a>
 					</div>
 					<!-- Carousel End -->
 				</div>
 			</div>
 		</div>
 	</div>
+
+	
+	<!-- Menubar -->
+	<div class="menubar">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+					<span class="glyphicon glyphicon-chevron-down"></span> 
+					<a id="menu">Courses</a>
+					
+					<div class="dropdown" title="Change Language">
+					  	<button class="btn dropdown-toggle transparent" type="button" id="dropdownMenu1" data-toggle="dropdown">
+					  	<span class="glyphicon glyphicon-globe"></span>&nbsp;&nbsp;
+					    En&nbsp;&nbsp;
+					    <span class="caret"></span>
+					  	</button>
+					  	<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+					    	<li role="presentation"><a role="menuitem" href="#">Dari</a></li>
+					    	<li role="presentation"><a role="menuitem" href="#">Spanish</a></li>
+					  	</ul>
+					</div>		
+				</div>
+				<div class="col-sm-4 text-center">
+					<h1><i class="fa fa-leaf logo"></i> BAHAR</h1>
+				</div>
+				<div class="col-sm-4 text-right">
+					<a href="#">How it works?</a>
+					<a class="btn transparent" data-toggle="modal" href='#modal-in'>Sign in / Sign up</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Menubar -->
+	
     
-    <div class="nav-holder">
-    	<nav class="navbar" role="navigation">
-    	<div class="container">
-	    	<a class="navbar-brand" href="/">BAHAR</a>
-	    	<ul class="nav navbar-nav">
-	    		<li class="">
-	    			<a href="#">Teach</a>
-	    		</li>
-	    		<li>
-	    			<a href="#">About</a>
-	    		</li>
-	    	</ul>
-	    	<ul class="nav navbar-nav pull-right">
-	    		@if(!Auth::user())
-	    		<li>
-	    			<a href="/user/register" data-toggle="" data-target="#signUpModal"><i class="fa fa-user"></i> Sign Up</a>
-	    		</li>
-	    		<li>
-	    			<a href="/user/login"><i class="fa fa-sign-in"></i> Login</a>
-	    		</li>
-	    		@else
-          <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <span class="glyphicon glyphicon-user"></span> 
-                  <strong>Welcome</strong>
-                  <span class="glyphicon glyphicon-chevron-down"></span>
-              </a>
-              <ul class="dropdown-menu user-login-dropdown">
-                  <li>
-                      <div class="navbar-login">
-                          <div class="row">
-                              <div class="col-lg-4">
-                                  <p class="text-center">
-                                      <span class="glyphicon glyphicon-user icon-size"></span>
-                                  </p>
-                              </div>
-                              <div class="col-lg-8">
-                                  <p class="text-left"><strong>Nombre Apellido</strong></p>
-                                  <p class="text-left small">correoElectronico@email.com</p>
-                                  <p class="text-left">
-                                      <a href="#" class="btn btn-primary btn-block btn-sm">Actualizar Datos</a>
-                                  </p>
-                              </div>
-                          </div>
-                      </div>
-                  </li>
-                  <li class="divider"></li>
-                  <li>
-                      <div class="navbar-login navbar-login-session">
-                          <div class="row">
-                              <div class="col-lg-12">
-                                  <p>
-                                      <a href="/user/logout" class="btn btn-danger btn-block"><i class="fa fa-sign-out"></i> Logout</a>
-                                  </p>
-                              </div>
-                          </div>
-                      </div>
-                  </li>
-              </ul>
-          </li>
-          @endif
-	    	</ul>
-	    </div>
-    	</nav>
+    
+	<nav class="navbar" role="navigation">
+	<div class="container">
+    	<a class="navbar-brand" href="/">BAHAR</a>
+    	<ul class="nav navbar-nav">
+    		<li class="">
+    			<a href="#">Teach</a>
+    		</li>
+    		<li>
+    			<a href="#">About</a>
+    		</li>
+    	</ul>
+    	<ul class="nav navbar-nav pull-right">
+    		@if(!Auth::user())
+    		<li>
+    			<a href="/user/register" data-toggle="" data-target="#signUpModal"><i class="fa fa-user"></i> Sign Up</a>
+    		</li>
+    		<li>
+    			<a href="/user/login"><i class="fa fa-sign-in"></i> Login</a>
+    		</li>
+    		@else
+		      <li class="dropdown">
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+		              <span class="glyphicon glyphicon-user"></span> 
+		              <strong>Welcome</strong>
+		              <span class="glyphicon glyphicon-chevron-down"></span>
+		          </a>
+		          <ul class="dropdown-menu user-login-dropdown">
+		              <li>
+		                  <div class="navbar-login">
+		                      <div class="row">
+		                          <div class="col-lg-4">
+		                              <p class="text-center">
+		                                  <span class="glyphicon glyphicon-user icon-size"></span>
+		                              </p>
+		                          </div>
+		                          <div class="col-lg-8">
+		                              <p class="text-left"><strong>Nombre Apellido</strong></p>
+		                              <p class="text-left small">correoElectronico@email.com</p>
+		                              <p class="text-left">
+		                                  <a href="#" class="btn btn-primary btn-block btn-sm">Actualizar Datos</a>
+		                              </p>
+		                          </div>
+		                      </div>
+		                  </div>
+		              </li>
+		              <li class="divider"></li>
+		              <li>
+		                  <div class="navbar-login navbar-login-session">
+		                      <div class="row">
+		                          <div class="col-lg-12">
+		                              <p>
+		                                  <a href="/user/logout" class="btn btn-danger btn-block"><i class="fa fa-sign-out"></i> Logout</a>
+		                              </p>
+		                          </div>
+		                      </div>
+		                  </div>
+		              </li>
+		          </ul>
+		      </li>
+		      @endif
+    	</ul>
     </div>
+	</nav>
+    
 
     
     @yield('content')
   	
+
+  	<!-- Modal-Hamid -->
+	<div class="modal fade" id="modal-in">	
+		<div class="modal-dialog">
+			<div class="tabbable">
+			  	<ul class="nav nav-tabs">
+			    	<li class="active text-center"><a href="#tab1" data-toggle="tab">Sign in</a></li>
+			    	<li class="text-center"><a href="#tab2" data-toggle="tab">Sign up</a></li>
+			  	</ul>
+			  	<div class="tab-content">
+			    	<div class="tab-pane active" id="tab1">
+			      		<div class="modal-content">
+							<div class="modal-body">
+								<form action="#" method="POST" role="form">							
+									<div class="form-group">
+										<div class="input-group">
+										  	<span class="input-group-addon glyphicon glyphicon-user"></span>
+										  	<input type="text" class="form-control" placeholder="Username" name="uname" required>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="input-group">
+										  	<span class="input-group-addon glyphicon glyphicon-lock"></span>
+										  	<input type="password" class="form-control" placeholder="Password" name="password" required>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="checkbox">
+									  		<label>
+									  			<input type="checkbox" value="remember" name="remember" >
+									  			Remember me
+									  		</label>
+									  	</div>
+									</div>
+									<button type="submit" class="btn btn-primary">Sign in</button><br/>
+									<a href="#">forgot your password?</a>
+								</form>
+							</div>
+						</div><!-- /.modal-content -->
+			    	</div>
+			    	<div class="tab-pane" id="tab2">
+			    		<div class="modal-content">
+							<div class="modal-body">
+								<form action="#" method="POST" role="form">							
+									<div class="form-group">
+										<div class="input-group">
+										  	<span class="input-group-addon glyphicon glyphicon-user"></span>
+										  	<input type="text" class="form-control" placeholder="Name" name="name" required>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="input-group">
+										  	<span class="input-group-addon glyphicon glyphicon-envelope"></span>
+										  	<input type="email" class="form-control" placeholder="Email" name="email" required>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="input-group">
+										  	<span class="input-group-addon glyphicon glyphicon-lock"></span>
+										  	<input type="password" class="form-control" placeholder="Password" name="password" required>
+										</div>
+									</div>
+									<div class="checkbox">
+										<label>
+											<input type="checkbox" value="agree" name="agree" checked="checked">
+											I agree to the <a href="#">Terms</a>
+										</label>
+									</div>
+									<button type="submit" class="btn btn-primary">Create Account</button>
+								</form>
+							</div>
+						</div><!-- /.modal-content -->
+			    	</div>
+			  	</div>
+			</div>
+					
+		</div>
+	</div>
+	<!-- End modal-Hamid -->
 
   	<!-- Modals on this page -->
 	<!-- Sign Up modal -->
@@ -305,6 +419,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     {{ HTML::script('js/bootstrap.min.js'); }}
+
+    <!-- Smoothscroll -->
+    {{HTML::script('js/smoothscroll.js');}}
 
     <!-- Bootsnip JS -->
     {{ HTML::script('js/bootsnip.js'); }}
