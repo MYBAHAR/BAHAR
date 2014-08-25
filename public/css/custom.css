@@ -144,3 +144,6 @@ div.footer ul {
 
 .top-margin {margin-top: 3em;}
 .bottom-margin {margin-bottom: 2em;}
+
+p {font-family: 'Open Sans Condensed', sans-serif;}
+h1 , h2 , h3 {font-family: 'Roboto Slab', serif !important;}

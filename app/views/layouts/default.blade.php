@@ -18,6 +18,9 @@
 		<!-- Custom CSS -->
 		{{ HTML::style('css/custom.css'); }}
 
+		<!-- Google Fonts -->
+		{{ HTML::style('http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto+Slab:700'); }}
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>

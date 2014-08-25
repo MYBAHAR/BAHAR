@@ -7,7 +7,7 @@
 			<div class="row">
 				<div class="col-sm-8 col-sm-offset-2 text-center">
 					<h1>Elearning Made Easy!</h1>
-					<p>Learning has been easier than always, hurry up don't waste the time</p>
+					<p>Learning has been easier than always, hurry up don't waste the time it only takes 2 minutes to register.</p>
 					<a href="/user/register" class="btn btn-primary" data-toggle="" data-target="#signUpModal">Start learning now</a>
 					<p>Or Search the content for your favourite course online</p>
 					<form action="#" method="POST" role="form">
