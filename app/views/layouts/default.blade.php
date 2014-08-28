@@ -184,7 +184,7 @@
 							<h4>BAHAR</h4>
 							<ul>
 								<li><a href="#">About</a></li>
-								<li><a href="#">Contact</a></li>
+								<li><a href="#">Contact us</a></li>
 								<li><a href="#">Careers</a></li>
 							</ul>
 						</div>

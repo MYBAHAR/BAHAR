@@ -33,3 +33,9 @@ Route::get('/admin', function()
 {
 	return View::make('admin.main');
 });
+
+
+// Temporary Route
+Route::get('/dashboard' , function(){
+	return View::make('dashboard');
+});
