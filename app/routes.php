@@ -35,7 +35,13 @@ Route::get('/admin', function()
 });
 
 
-// Temporary Route
+// Temporary Route to dashboard
 Route::get('/dashboard' , function(){
 	return View::make('dashboard');
 });
+
+// Temporary Route to coursehome
+Route::get('/course' , function(){
+	return View::make('coursehome');
+});
+

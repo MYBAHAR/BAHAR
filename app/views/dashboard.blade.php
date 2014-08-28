@@ -10,7 +10,7 @@
 	{{ HTML::style('font-awesome/css/font-awesome.min.css'); }}
 
 	<!-- Custom CSS -->
-	{{ HTML::style('css/custom.css'); }}
+	<!-- {{ HTML::style('css/custom.css'); }} -->
 
 	<!-- Google Fonts -->
 	{{ HTML::style('http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto+Slab:700'); }}
