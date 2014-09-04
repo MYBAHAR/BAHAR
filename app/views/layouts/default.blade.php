@@ -31,7 +31,7 @@
 	    	<a class="navbar-brand" href="/">BAHAR</a>
 	    	<ul class="nav navbar-nav">
 	    		<li class="">
-	    			<a href="#">Teach</a>
+	    			<a href="/teach">Teach</a>
 	    		</li>
 	    		<li>
 	    			<a href="#">About</a>

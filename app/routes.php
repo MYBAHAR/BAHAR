@@ -33,3 +33,6 @@ Route::get('/admin', function()
 {
 	return View::make('admin.main');
 });
+
+// User as a teacher
+Route::get('/teach', 'CourseController@getCourses');
