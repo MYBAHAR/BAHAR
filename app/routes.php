@@ -35,4 +35,4 @@ Route::get('/admin', function()
 });
 
 // User as a teacher
-Route::get('/teach', 'CourseController@getCourses');
+Route::resource('/teach/courses', 'CourseController');
