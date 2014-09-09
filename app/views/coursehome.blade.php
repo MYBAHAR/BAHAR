@@ -14,11 +14,43 @@
 
 	<!-- Google Fonts -->
 	{{ HTML::style('http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto+Slab:700'); }}
-
+	
+	<style type="text/css">
+		.icons {
+			width:30px;display:inline-block;margin-right:10px;margin: 10px 0px;
+		}
+		.fixed-menu a {color: black;opacity: 0.6;text-decoration: none;}
+		.fixed-menu a:hover {color: black;opacity: 1;}
+	</style>
 </head>
 <body>
 	<!-- Menubar -->
-
+	<div class="fixed-menu" style="position:fixed;top:20%;left:20px;z-index:9999;">
+		<a href="#">
+			<span class="icons"><i class="fa fa-home fa-lg"></i></span> Home
+		</a><br/>
+		<a href="#">
+			<span class="icons"><i class="fa fa-bullhorn fa-lg"></i></span> Announcements
+		</a><br/>
+		<a href="#">
+			<span class="icons"><i class="fa fa-bell fa-lg"></i></span> Lessons
+		</a><br/>
+		<a href="#">
+			<span class="icons"><i class="fa fa-globe fa-lg"></i></span> Resources
+		</a><br/>
+		<a href="#">
+			<span class="icons"><i class="fa fa-comments fa-lg"></i></span> Discussion
+		</a><br/>
+		<a href="#">
+			<span class="icons"><i class="fa fa-graduation-cap fa-lg"></i></span> Certificate
+		</a><br/>
+		<a href="#">
+			<span class="icons"><i class="fa fa-cloud-download fa-lg"></i></span> Download
+		</a><br/>
+		<a href="#">
+			<span class="icons"><i class="fa fa-users fa-lg"></i></span> Students
+		</a>
+	</div>
 	<!-- Menubar End -->
 
 	<div class="container">
@@ -28,13 +60,15 @@
 			</div>
 
 			<div class="col-sm-6">
-				<h1>HTML5 & CSS3</h1>
-				<p>Fundamentals of HTML5 mark up language and CSS3 cascading style sheet</p>
+				<h1>Fundamentals of Computer Programing</h1>
+				<p>This course is intended to make you familiar with the basics of computer programing. It goes throught the Security risks that a program might face with and shows you have to remove those security attacks.</p>
+				<p><strong>By:</strong> Hamid Reza Sepehr</p>
 				<a href="" class="btn btn-warning">Start Now</a>
 			</div>
 		</div>
 		<hr/>
 		<div class="row">
+			<h3 class="text-center">This course contains:</h3>
 			<div class="col-sm-8 col-sm-offset-2 text-center">
 				<span style="display:inline-block;margin:0px 1em;">
 					<i class="fa fa-caret-square-o-right fa-3x"></i>
@@ -60,10 +94,10 @@
 				</p>
 				<p>
 					<ul style="list-style-type:none">
-						<li>What is CSS?</li>
-						<li>CSS3</li>
-						<li>What is HTML?</li>
-						<li>HTML5</li>
+						<li>What is a PROGRAM?</li>
+						<li>10 reasons you should learn it</li>
+						<li>What is a compiler?</li>
+						<li>Interpretors</li>
 					</ul>
 				</p>
 				<br/>
@@ -73,8 +107,11 @@
 				</p>
 				<p>
 					<ul style="list-style-type:none">
-						<li>Start Coding HTML</li>
-						<li>Using CSS to style the elements</li>
+						<li>Start Coding</li>
+						<li>Programing Languages</li>
+						<li>Java</li>
+						<li>PHP</li>
+						<li>Phyton</li>
 					</ul>
 				</p>
 				<br/>
@@ -84,10 +121,10 @@
 				</p>
 				<p>
 					<ul style="list-style-type:none">
-						<li>HTML5 and Security</li>
-						<li>Using proper styles</li>
-						<li>Vulnerabalities</li>
-						<li>Troubleshooting</li>
+						<li>Vulnerabalities and Security</li>
+						<li>3 step methode</li>
+						<li>Give less info</li>
+						<li>Whitelisting</li>
 					</ul>
 				</p>
 			</div>
@@ -99,8 +136,8 @@
 			<div class="col-sm-8 col-sm-offset-2">
 				<h1>About the Author:</h1>
 				<img src="{{asset('images/courses/course-01/author.png')}}" class="pull-left" style="width:150px;padding-right:2em;">
-				<p class="lead">Mark Zuckerberg</p>
-				<p>Facebook</p>
+				<p class="lead">Hamid Reza Sepehr</p>
+				<p>BAHAR Organization</p>
 				<a href="#" class="btn btn-success btn-sm">More</a>
 			</div>
 		</div>

@@ -1,27 +1,88 @@
 @extends('layouts.default')
 
+@section('header')
+	<script type="text/javascript" charset="utf-8">
+	  	$(window).load(function() {
+	    	$('.flexslider').flexslider({
+	    		animation: "slide",
+	    		direction: "vertical",
+	    		controlNav: false,
+	    		directionNav: false,
+	    		startAt: 1
+	    		});
+	  	});
+	</script>
+@stop
+
 @section('content')
-	<!-- Introductory -->
-	<div class="introductory">
+
+	<!-- Image holder -->
+	<div class="top-image">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-8 col-sm-offset-2 text-center">
+					<p class="welcome lead">Welcome to BAHAR online learning platform</p>
+					<p>
+						<a href="#"><i class="fa fa-lg fa-facebook-square"></i></a>
+						<a href="#"><i class="fa fa-lg fa-twitter-square"></i></a>
+						<a href="#"><i class="fa fa-lg fa-linkedin-square"></i></a>
+						<a href="#"><i class="fa fa-lg fa-google-plus-square"></i></a>
+					</p>
+					<br/>
+					<div class="flexslider">
+					  	<ul class="slides">
+					    	<li>
+					      		Find a course
+					    	</li>
+					    	<li>
+					      		Enroll and start learning
+					    	</li>
+					    	<li>
+					      		Do assignments and pass the exam
+					    	</li>
+					    	<li>
+					      		Earn a certificate.
+					    	</li>
+					  	</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Introductory -->
+	<div class="introductory">
+		<div class="container">
+			<div class="row top-margin bottom-margin">
+				<div class="col-sm-8 col-sm-offset-2 text-center">
 					<h1>Elearning Made Easy!</h1>
 					<p>Learning has been easier than always, hurry up don't waste the time it only takes 2 minutes to register.</p>
-					<a href="/user/register" class="btn btn-primary" data-toggle="" data-target="#signUpModal">Start learning now</a>
+					<br/><br/>
+					<a href="/user/register" class="btn btn-warning" data-toggle="" data-target="#signUpModal">Start learning now</a>
+					<br/><br/><br/>
 					<p>Or Search the content for your favourite course online</p>
-					<form action="#" method="POST" role="form">
-						<div id="custom-search-input"> <!--I didn't get what is this for Musfafa-->
-							<div class="input-group">
-							  	<input type="text" class="search-query form-control" placeholder="Keyword to search">
-							  	<!-- <button type="submit" class="btn btn-primary">Search</button> -->
-							  	<!-- <span class="input-group-addon glyphicon glyphicon-search"></span>	 -->
-							  	<span class="input-group-btn">
-							        <button class="btn btn-default" type="button">Go!</button>
-							    </span>
-							</div>
-						</div>	
-					</form>
+
+					<div class="row">
+						<div class="col-sm-8 col-sm-offset-2">
+							<form action="#" method="POST" role="form">
+								<!-- <div id="custom-search-input"> 
+									<div class="input-group">
+									  	<input type="text" class="search-query form-control" placeholder="Keyword to search">
+									  	<button type="submit" class="btn btn-primary">Search</button>
+									  	<span class="input-group-addon glyphicon glyphicon-search"></span>	
+									  	<span class="input-group-btn">
+									        <button class="btn btn-default" type="button">Go!</button>
+									    </span>
+									</div>
+								</div>	 -->
+								<div class="input-group">
+								  	<span class="input-group-addon"><i class="fa fa-search"></i></span>
+								  	<input type="text" class="form-control" placeholder="Search">
+								</div>
+							</form>
+						</div>
+					</div>
+					
 
 				</div>
 			</div>
@@ -30,26 +91,52 @@
 	<!-- End Introductory -->
 	
 	<!-- Why BAHAR? -->
-	<div class="container">
+	<div class="why">
+		<div class="container">
 		<div class="row text-center">
 			<h1 class="heading">Why BAHAR?</h1>
 			<p>We have a handful of reasons for you, but BAHAR users say these</p>
 			<div class="col-sm-4 top-margin">
 				<i class="fa fa-group fa-2x"></i>
-				<h3>World wide users</h3>
+				<br/><br/>
+				<p class="lead">World wide users</p>
 				<p>With BAHAR, you'll join a community of thousands of students and instructors</p>
 			</div>
 			<div class="col-sm-4 top-margin">
 				<i class="fa fa-child fa-2x"></i>
-				<h3>Access anywhere, anytime</h3>
+				<br/><br/>
+				<p class="lead">Access anywhere, anytime</p>
 				<p>Either if you are in United States or Afghanistan, it makes no difference. You have access anytime anywhere!</p>
 			</div>
 			<div class="col-sm-4 top-margin">
 				<i class="fa fa-mobile fa-2x"></i>
-				<h3>Use BAHAR on any device</h3>
+				<br/><br/>
+				<p class="lead">Use BAHAR on any device</p>
 				<p>Whether if you are a tablet user, mobile, iphone or PC. Don't worry BAHAR is available on all those devices</p>
 			</div>
 		</div>
+
+		<div class="row text-center">
+			<div class="col-sm-4 top-margin">
+				<i class="fa fa-arrows fa-2x"></i>
+				<br/><br/>
+				<p class="lead">Variety of courses</p>
+				<p>BAHAR is one of the largest online courses, including more than 1100 courses in different topics. Our topics' scope is so vast, including language learning, science, economics, sport, art etc.</p>
+			</div>
+			<div class="col-sm-4 top-margin">
+				<i class="fa fa-graduation-cap fa-2x"></i>
+				<br/><br/>
+				<p class="lead">Graduate with a degree</p>
+				<p>Provided that you pass all the exam with the appropriate score, you'd be eligable for the certificate.</p>
+			</div>
+			<div class="col-sm-4 top-margin">
+				<i class="fa fa-cloud-download fa-2x"></i>
+				<br/><br/>
+				<p class="lead">Keep learning offline</p>
+				<p>You can download all your course materials to be viewed when you are offline.</p>
+			</div>
+		</div>
+	</div>
 	</div>
 	<!-- End why BAHAR -->
 
@@ -97,7 +184,7 @@
 						</div>
 					</div>
 					<p class="text-center">
-						<a href="#" class="btn btn-warning">More Courses</a>
+						<a href="/all" class="btn btn-warning">More Courses</a>
 					</p>
 				</div>
 			</div>
@@ -110,6 +197,7 @@
 		<div class="container">
 			<div class="row">
 			<h1 class="heading text-center">What our users say</h1>
+			<br/><br/><br/>
 				<div class="col-sm-8 col-sm-offset-2">
 					
 					<div id="mytestimonial" class="carousel slide" data-ride="carousel">

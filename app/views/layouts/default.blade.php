@@ -21,52 +21,54 @@
 		<!-- Google Fonts -->
 		{{ HTML::style('http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto+Slab:700'); }}
 
+		<!-- Flexslider/css -->
+		{{HTML::style('css/flexslider.css');}}
+
+		<!-- Jquery -->
+		{{HTML::script('js/jquery.js');}}
+
+		<!-- Flexslider/Javascript -->
+		{{HTML::script('js/jquery.flexslider-min.js');}}
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    @yield('header')
   </head>
   <body>
-  	<!-- Image holder -->
-	<div class="top-image">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-8 col-sm-offset-2">
-					<!-- Carousel Start -->
-					<div id="intro-carousel" class="carousel slide" data-ride="carousel">
-					    <div class="carousel-inner text-center">
-					        <div class="item active">
-					            <i class="fa fa-2x fa-road"></i>
-			                    <h1>Take a course</h1>
-			                    <p>Feel free to browse through our wide range of courses and find your favourite course.</p>
-			                    <p><a class="btn btn-primary" href="#" role="button">Learn More</a></p>
-					        </div>
-					        <div class="item">
-					            <i class="fa fa-2x fa-graduation-cap"></i>	                
-			                    <h1>Graduate</h1>
-			                    <p>After finishing your course, you'll receive a test. Based apon your scores in the exam you'll receive a certificate showing that you've successfully finished the course.</p>
-			                    <p><a class="btn btn-primary" href="#" role="button">Learn more</a></p>
-					        </div>
-					        <div class="item">
-					            <i class="fa fa-2x fa-briefcase"></i>
-			                    <h1>Find a job</h1>
-			                    <p>Our courses are thought by the best and most exprienced instructors around the world. Thus after graduating from our courses you'd have enough knowledge and skills to easily be hired!</p>
-			                    <p><a class="btn btn-primary" href="#" role="button">Learn More</a></p>
-					        </div>
-					    </div>
-					    <a class="left carousel-control" href="#intro-carousel" data-slide="prev"><i class="fa fa-long-arrow-left car-arrow"></i></a>
-					    <a class="right carousel-control" href="#intro-carousel" data-slide="next"><i class="fa fa-long-arrow-right car-arrow"></i></a>
-					</div>
-					<!-- Carousel End -->
-				</div>
-			</div>
-		</div>
-	</div>
+
+  <div class="top-menu">
+  	<div class="container">
+  		<div class="row">
+  			<div class="col-xs-3">
+  				<h3><a href="/">BAHAR</a></h3>
+  			</div>
+  			<div class="col-xs-9">
+  				<ul class="navbar-right menu">
+  					<li><a data-toggle="modal" href='#modal-in'>Create Account</a></li>
+  					<li><a data-toggle="modal" href='#modal-in'>Log in</a></li>
+  					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Language <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">English</a></li>
+							<li><a href="#">Dari</a></li>
+							<li><a href="#">Spanish</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Courses <i class="fa fa-caret-square-o-down"></i></a></li>
+  				</ul>
+  			</div>
+  		</div>
+  	</div>
+  </div>
+  	
 
 	
-	<!-- Menubar -->
+	<!-- Menubar 
 	<div class="menubar">
 		<div class="container">
 			<div class="row">
@@ -96,11 +98,103 @@
 			</div>
 		</div>
 	</div>
-	<!-- End Menubar -->
-	
+	 End Menubar -->
+
+	<div class="courses" id="courses">
+		<div class="list-group">
+	  	<a href="#" class="list-group-item">
+		    <span class="menu-item-1">Computer Science</span> 
+		    <i class="fa fa-angle-right"></i>
+		</a>
+	    <div class="list-group sub">
+	    	<p class="lead first">Computer Science</p>
+	    	<a href="#" class="list-group-item">Programming</a>
+	    	<a href="#" class="list-group-item">Information Technology</a>
+	    	<a href="#" class="list-group-item">Artificial Intelligence</a>
+	    </div>
+	  	
+	  	<a href="#" class="list-group-item">
+	  		<span class="menu-item-1">Medical Science</span> 
+		  	<i class="fa fa-angle-right"></i>
+		</a>
+		<div class="list-group sub">
+			<p class="lead first">Medical Science</p>
+	    	<a href="#" class="list-group-item">Stomatology</a>
+	    	<a href="#" class="list-group-item">Mental</a>
+	    </div>
+
+	  	<a href="#" class="list-group-item">
+	  		<span class="menu-item-1">Math</span> 
+	  		<i class="fa fa-angle-right"></i>
+	 	</a>
+  		<div class="list-group sub">
+  			<p class="lead first">Math</p>
+	    	<a href="#" class="list-group-item">Analasys Mathematics</a>
+	    </div>
+
+	  	<a href="#" class="list-group-item">
+	  		<span class="menu-item-1">Economics</span> 
+	  		<i class="fa fa-angle-right"></i>
+	 	</a>
+ 		<div class="list-group sub">
+ 			<p class="lead first">Economics</p>
+	    	<a href="#" class="list-group-item">Statistics</a>
+	    	<a href="#" class="list-group-item">Capital</a>
+	    	<a href="#" class="list-group-item">Innovative ideas</a>
+	    </div>
+
+	  	<a href="#" class="list-group-item">
+	  		<span class="menu-item-1">TOEFL Preparations</span> 
+	  		<i class="fa fa-angle-right"></i>
+	 	</a>
+  		<div class="list-group sub">
+	    	<p class="lead first">TOEFL Preparations</p>
+	    	<a href="#" class="list-group-item">TOEFL Barron Preparation</a>
+	    	<a href="#" class="list-group-item">Longman Preparation</a>
+	    	<a href="#" class="list-group-item">GRE Test Essentials</a>
+	    	<a href="#" class="list-group-item">1100 Essential words for the TOEFL</a>
+	    	<a href="#" class="list-group-item">TOEFL Check list</a>
+	    </div>
+
+	  	<a href="#" class="list-group-item">
+	  		<span class="menu-item-1">Art</span> 
+	  		<i class="fa fa-angle-right"></i>
+	  	</a>
+  		<div class="list-group sub">
+  			<p class="lead first">Art</p>
+	    	<a href="#" class="list-group-item">Painting</a>
+	    	<a href="#" class="list-group-item">Sculpture</a>
+	    	<a href="#" class="list-group-item">Music</a>
+	    </div>
+	 	
+	  	<a href="#" class="list-group-item">
+	  		<span class="menu-item-1">History</span> 
+	  		<i class="fa fa-angle-right"></i>
+	 	</a>
+  		<div class="list-group sub">
+  			<p class="lead first">History</p>
+	    	<a href="#" class="list-group-item">Europe History</a>
+	    	<a href="#" class="list-group-item">Crusade wars history</a>
+	    	<a href="#" class="list-group-item">Old empires history</a>
+	    	<a href="#" class="list-group-item">History of Islam</a>
+	    </div>
+
+	  	<a href="#" class="list-group-item">
+	  		<span class="menu-item-1">Marketing</span> 
+	  		<i class="fa fa-angle-right"></i>
+	 	</a>
+  		<div class="list-group sub">
+  			<p class="lead first">Marketing</p>
+	    	<a href="#" class="list-group-item">Priciples of Marketing</a>
+	    	<a href="#" class="list-group-item">Successful Businesses</a>
+	    	<a href="#" class="list-group-item">Market Management</a>
+	    </div>
+
+		</div>
+	</div>
     
     
-	<nav class="navbar" role="navigation">
+	<!-- <nav class="navbar" role="navigation">
 	<div class="container">
     	<a class="navbar-brand" href="/">BAHAR</a>
     	<ul class="nav navbar-nav">
@@ -162,7 +256,7 @@
 		      @endif
     	</ul>
     </div>
-	</nav>
+	</nav> -->
     
 
     
@@ -476,6 +570,8 @@
 	  </div>
 	</div>
 
+	
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -486,6 +582,52 @@
 
     <!-- Bootsnip JS -->
     {{ HTML::script('js/bootsnip.js'); }}
+
+
+	<script type="text/javascript">
+		$(function(){
+
+			function toggleNav() {
+			    if ($('#courses').hasClass('show-nav')) {
+			        // Do things on Nav Close
+			        $('#courses').removeClass('show-nav');
+			    } else {
+			        // Do things on Nav Open
+			        $('#courses').addClass('show-nav');
+			    }
+			}
+
+		
+		    $('#menu').click(function() {
+		        // Calling a function in case you want to expand upon this.
+		        toggleNav();
+		    });
+
+		   /* $('*:not("#menu")').click(function() {
+		        if ($('#courses').hasClass('show-nav')) {
+		            // Assuming you used the function I made from the demo
+		            toggleNav();
+		        }
+		        
+		        toggleNav();		        
+		    });*/
+		
+			$(document).keyup(function(e) {
+			    if (e.keyCode == 27) {
+			        if ($('#courses').hasClass('show-nav')) {
+			            // Assuming you used the function I made from the demo
+			            toggleNav();
+			        }
+			    } 
+			});	
+
+			//$(".menubar").waypoint('sticky' , {
+			//	offset:-200
+			//});	
+		});
+
+	</script>
+
 
   </body>
 </html>

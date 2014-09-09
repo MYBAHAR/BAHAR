@@ -67,7 +67,7 @@
 			<!-- First Row -->
 			<div class="row">
 				<div class="col-sm-3">
-					<a href="#"><img src="{{asset('images/courses/1.jpg')}}" class="img-responsive"></a>
+					<a href="/course"><img src="{{asset('images/courses/1.jpg')}}" class="img-responsive"></a>
 				</div>
 				<div class="col-sm-4">
 					<h4>Fundamentals of Computer Programing</h4>
@@ -75,7 +75,7 @@
 					<p><srtong>Enroll Date:</srtong> August 13 2014</p>
 					<a href="#">Abotu course</a>
 					<br/>
-					<a href="#" class="btn btn-warning">Go to class</a>
+					<a href="/course" class="btn btn-warning">Go to class</a>
 				</div>
 				<div class="col-sm-5 text-right">
 					<p><a href="#">32 Lectures</a></p>

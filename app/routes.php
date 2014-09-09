@@ -45,3 +45,8 @@ Route::get('/course' , function(){
 	return View::make('coursehome');
 });
 
+// All Courses list
+Route::get('/all' , function(){
+	return View::make('all-courses');
+});
+

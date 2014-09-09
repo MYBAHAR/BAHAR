@@ -1,38 +1,79 @@
+body {background-color: #ebebeb;}
+.top-menu {
+	background-color: black;
+	color: white;
+}
+
+.top-menu a {
+	color: white;
+	text-decoration: none;
+}
+
+ul.menu {margin-top: 20px;}
+
+ul.menu li {
+	list-style-type: none;
+	display: inline;
+	margin: 0px 1em;
+}
+
 .top-image {
-	background-image: url('../images/top.jpg');
+	background-image: url('../images/header.jpg');
 	background-size:100%;
 	background-repeat:no-repeat;
-	background-attachment: fixed;
+	/*background-attachment: fixed;*/
 	//padding: 50px;
-	//height: 683px;
+	height: 683px;
 }
 
-.menubar {
-	//background-color: #ebebeb;
-	position: fixed;
-	width: 100%;
-	z-index: 9999999;
-	top: 0px;
-	color: black;
+.top-image a {color: black;}
+
+p.welcome {
+	background-color: yellow;
+	padding: 5px;
+	display: inline-block;
+	margin-top: 20%;
 }
 
-.menubar .dropdown {display: inline;}
-.menubar button.dropdown-toggle {background-color: transparent;}
-.menubar h1 {margin: 0px;}
-.menubar a {color: black;}
-
-div.top-image .carousel-control.right {background-image: none;}
-div.top-image .carousel-control.left {background-image: none;}
-
-div#intro-carousel {margin: 30% 0px;}
 
 
 div.item  {padding: 0px 100px;}
 .car-arrow {position: absolute;top: 50%;border: 2px solid white;padding: 0.5em;border-radius: 50px;}
 
 div.introductory {
-	background-color: yellow;
+	background-color: #1093c4;
 	padding:2em 0px;
+}
+
+.why i {
+	background-color: #f9ce1d;
+	padding: 0.8em;
+	border-radius: 4em;
+	width: 30px;
+	box-sizing:content-box;
+	-webkit-transition: all 200ms ease-in-out;
+	-o-transition: all 200ms ease-in-out;
+	transition: all 200ms ease-in-out;
+}
+
+.why p.lead {
+	margin-bottom: 7px;
+	-webkit-transition: all 200ms ease-in-out;
+	-o-transition: all 200ms ease-in-out;
+	transition: all 200ms ease-in-out;
+}
+
+.why .col-sm-4:hover i {
+	-webkit-transform: scale(0.9);
+	-ms-transform: scale(0.9);
+	-o-transform: scale(0.9);
+	transform: scale(0.9);
+}
+.why .col-sm-4:hover p.lead {
+	-webkit-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	transform: scale(1.1);
 }
 
 h1.heading {
@@ -97,7 +138,6 @@ div.testimonials ol.carousel-indicators li.active {
 
 div.footer {
 	background-color: #e6e7e8;
-	margin: 3em 0px;
 	padding: 3em 0px;
 	margin-bottom: 0px;
 }
@@ -126,8 +166,8 @@ div.footer ul {
 
 .partners {
 	background-color: #00bff3;
-	margin: 2em 0px;
-	padding:1em 0px;
+	margin-top: 5em;
+	padding:0.5em 0px;
 }
 
 #modal-in .glyphicon {top: 0px;}
@@ -140,10 +180,78 @@ div.footer ul {
 #modal-in .nav-tabs {border-bottom: 0px;}
 #modal-in .modal-content {box-shadow: none !important;-webkit-box-shadow:none !important;border: 0px !important;}
 
-#modal-in {top: 150px;}
+#modal-in {padding-top: 100px;}
 
 .top-margin {margin-top: 3em;}
 .bottom-margin {margin-bottom: 2em;}
 
 p {font-family: 'Open Sans Condensed', sans-serif;}
 h1 , h2 , h3 {font-family: 'Roboto Slab', serif !important;}
+
+
+/*////////////////////////SUBMENU///////////////////////////////*/
+
+div.courses {
+	position: fixed;
+	top: 73px;
+	z-index: 9999999;
+	-webkit-transform: translate3d(-224px, 0, 0);  
+    transform: translate3d(-224px, 0, 0); 
+    -webkit-transition: all 300ms cubic-bezier(0.32,1.25,0.375,1.15);
+    transition: all 300ms cubic-bezier(0.32,1.25,0.375,1.15);
+    height: 100%;
+    background-color: white;
+}
+
+div.courses.show-nav  {
+    -webkit-transform: translate3d(0px, 0, 0);  
+    transform: translate3d(0px, 0, 0); 
+}
+
+
+.sub {
+	position:fixed;
+	left:188px;
+	top:73px;
+	width:400px;
+	height: 100% !important;
+	visibility: hidden;
+	background-color: #aa0d43;
+}
+.sub a {
+	background-color: transparent;
+	color: white !important;
+}
+.sub a:hover {background-color: transparent !important;}
+
+.sub .first {
+	font-weight: 900;
+	font-size: larger;
+	margin-bottom: 20px;
+	margin: 15px;
+	color: white;
+	border-bottom: 1px solid white;
+}
+
+
+a.list-group-item:hover + .sub , .sub:hover {visibility: visible !important;}
+a.list-group-item:hover span.menu-item-1 {font-weight: 900;font-size: larger;}
+a.list-group-item {
+	border: 0px;
+}
+
+span.menu-item-1 {display: inline-block;width: 150px;}
+
+
+/*//////////////////////all-courses.blade.php/////////////////////////*/
+.browse .form-group {margin-bottom: 0.5em;}
+.browse input[type="checkbox"] {
+	width: 20px;
+	height: 20px;
+}
+
+.browse .lead {
+	background-color: orange;
+	padding: 5px;
+	margin: 10px 0px;
+}
