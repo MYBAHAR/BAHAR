@@ -44,19 +44,19 @@ class CourseController extends \BaseController {
 		$rules = array(
 			'title' => 'required|max:255',
 			'description' => 'required|max:1024',
-			'image' => 'max:10000',
+			'image' => 'max:10000|mimes:png,jpg,jpeg,bmp,gif',
 			'fee' => 'numeric'
 		);
 		$validator = Validator::make(Input::all(), $rules);
 
 		// Check for the image type
-		$mimes = array('image/gif', 'image/jpeg', 'image/png', 'image/jpg', 'image/bmp');
+		/* $mimes = array('image/gif', 'image/jpeg', 'image/png', 'image/jpg', 'image/bmp');
 		$uploadedMime = Input::file('image')->getMimeType();
 
 		if(!in_array($uploadedMime, $mimes)){
 			return Redirect::to('teach/courses/create')
 				->withErrors('The image must be a file of type: jpg, jpeg, png, gif, bmp');
-		}
+		} */
 		// Implement the validation
 		if($validator->fails()){
 			return Redirect::to('teach/courses/create')
