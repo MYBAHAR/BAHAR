@@ -36,3 +36,18 @@ Route::get('/admin', function()
 
 // User as a teacher
 Route::resource('/teach/courses', 'CourseController');
+
+// Temporary Route to dashboard
+Route::get('/dashboard' , function(){
+	return View::make('dashboard');
+});
+
+// Temporary Route to coursehome
+Route::get('/course' , function(){
+	return View::make('coursehome');
+});
+
+// All Courses list
+Route::get('/all' , function(){
+	return View::make('all-courses');
+});

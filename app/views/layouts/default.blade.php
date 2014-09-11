@@ -4,19 +4,31 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>BAHAR</title>
+    <title>BAHAR | Elearning Made Easy</title>
 
     <!-- Bootstrap -->
-		{{ HTML::style('css/bootstrap.min.css'); }}
+	{{ HTML::style('css/bootstrap.min.css'); }}
 
-		<!-- Font Awesome -->
-		{{ HTML::style('font-awesome/css/font-awesome.min.css'); }}
+	<!-- Font Awesome -->
+	{{ HTML::style('font-awesome/css/font-awesome.min.css'); }}
 
-		<!-- Bootsnip CSS -->
-		{{ HTML::style('css/bootsnip.css'); }}
+	<!-- Bootsnip CSS -->
+	{{ HTML::style('css/bootsnip.css'); }}
 
-		<!-- Custom CSS -->
-		{{ HTML::style('css/custom.css'); }}
+	<!-- Custom CSS -->
+	{{ HTML::style('css/custom.css'); }}
+
+	<!-- Google Fonts -->
+	{{ HTML::style('http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto+Slab:700'); }}
+
+	<!-- Flexslider/css -->
+	{{HTML::style('css/flexslider.css');}}
+
+	<!-- Jquery -->
+	{{HTML::script('js/jquery.js');}}
+
+	<!-- Flexslider/Javascript -->
+	{{HTML::script('js/jquery.flexslider-min.js');}}
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -24,74 +36,336 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    @yield('header')
   </head>
   <body>
-    <nav class="navbar navbar-default" role="navigation">
-    	<div class="container">
-	    	<a class="navbar-brand" href="/">BAHAR</a>
-	    	<ul class="nav navbar-nav">
-	    		<li class="">
-	    			<a href="/teach/courses">Teach</a>
-	    		</li>
-	    		<li>
-	    			<a href="#">About</a>
-	    		</li>
-	    	</ul>
-	    	<ul class="nav navbar-nav pull-right">
-	    		@if(!Auth::user())
-	    		<li>
-	    			<a href="/user/register" data-toggle="" data-target="#signUpModal"><i class="fa fa-user"></i> Sign Up</a>
-	    		</li>
-	    		<li>
-	    			<a href="/user/login"><i class="fa fa-sign-in"></i> Login</a>
-	    		</li>
-	    		@else
-          <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <span class="glyphicon glyphicon-user"></span> 
-                  <strong>Welcome</strong>
-                  <span class="glyphicon glyphicon-chevron-down"></span>
-              </a>
-              <ul class="dropdown-menu user-login-dropdown">
-                  <li>
-                      <div class="navbar-login">
-                          <div class="row">
-                              <div class="col-lg-4">
-                                  <p class="text-center">
-                                      <span class="glyphicon glyphicon-user icon-size"></span>
-                                  </p>
-                              </div>
-                              <div class="col-lg-8">
-                                  <p class="text-left"><strong>Nombre Apellido</strong></p>
-                                  <p class="text-left small">correoElectronico@email.com</p>
-                                  <p class="text-left">
-                                      <a href="#" class="btn btn-primary btn-block btn-sm">Actualizar Datos</a>
-                                  </p>
-                              </div>
-                          </div>
-                      </div>
-                  </li>
-                  <li class="divider"></li>
-                  <li>
-                      <div class="navbar-login navbar-login-session">
-                          <div class="row">
-                              <div class="col-lg-12">
-                                  <p>
-                                      <a href="/user/logout" class="btn btn-danger btn-block"><i class="fa fa-sign-out"></i> Logout</a>
-                                  </p>
-                              </div>
-                          </div>
-                      </div>
-                  </li>
-              </ul>
-          </li>
-          @endif
-	    	</ul>
-	    </div>
-    </nav>
-    <div class="container">
-    	@yield('content')
+
+  <div class="top-menu">
+  	<div class="container">
+  		<div class="row">
+  			<div class="col-xs-3">
+  				<h3><a href="/">BAHAR</a></h3>
+  			</div>
+  			<div class="col-xs-9">
+  				<ul class="navbar-right menu">
+  					<li><a data-toggle="modal" href='#modal-in'>Create Account</a></li>
+  					<li><a data-toggle="modal" href='#modal-in'>Log in</a></li>
+  					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Language <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">English</a></li>
+							<li><a href="#">Dari</a></li>
+							<li><a href="#">Spanish</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Courses <i class="fa fa-caret-square-o-down"></i></a></li>
+  				</ul>
+  			</div>
+  		</div>
   	</div>
+  </div>
+
+
+	<div class="courses" id="courses">
+		<div class="list-group">
+	  	<a href="#" class="list-group-item">
+		    <span class="menu-item-1">Computer Science</span>
+		    <i class="fa fa-angle-right"></i>
+		</a>
+	    <div class="list-group sub">
+	    	<p class="lead first">Computer Science</p>
+	    	<a href="#" class="list-group-item">Programming</a>
+	    	<a href="#" class="list-group-item">Information Technology</a>
+	    	<a href="#" class="list-group-item">Artificial Intelligence</a>
+	    </div>
+
+	  	<a href="#" class="list-group-item">
+	  		<span class="menu-item-1">Medical Science</span>
+		  	<i class="fa fa-angle-right"></i>
+		</a>
+		<div class="list-group sub">
+			<p class="lead first">Medical Science</p>
+	    	<a href="#" class="list-group-item">Stomatology</a>
+	    	<a href="#" class="list-group-item">Mental</a>
+	    </div>
+
+	  	<a href="#" class="list-group-item">
+	  		<span class="menu-item-1">Math</span>
+	  		<i class="fa fa-angle-right"></i>
+	 	</a>
+  		<div class="list-group sub">
+  			<p class="lead first">Math</p>
+	    	<a href="#" class="list-group-item">Analasys Mathematics</a>
+	    </div>
+
+	  	<a href="#" class="list-group-item">
+	  		<span class="menu-item-1">Economics</span>
+	  		<i class="fa fa-angle-right"></i>
+	 	</a>
+ 		<div class="list-group sub">
+ 			<p class="lead first">Economics</p>
+	    	<a href="#" class="list-group-item">Statistics</a>
+	    	<a href="#" class="list-group-item">Capital</a>
+	    	<a href="#" class="list-group-item">Innovative ideas</a>
+	    </div>
+
+	  	<a href="#" class="list-group-item">
+	  		<span class="menu-item-1">TOEFL Preparations</span>
+	  		<i class="fa fa-angle-right"></i>
+	 	</a>
+  		<div class="list-group sub">
+	    	<p class="lead first">TOEFL Preparations</p>
+	    	<a href="#" class="list-group-item">TOEFL Barron Preparation</a>
+	    	<a href="#" class="list-group-item">Longman Preparation</a>
+	    	<a href="#" class="list-group-item">GRE Test Essentials</a>
+	    	<a href="#" class="list-group-item">1100 Essential words for the TOEFL</a>
+	    	<a href="#" class="list-group-item">TOEFL Check list</a>
+	    </div>
+
+	  	<a href="#" class="list-group-item">
+	  		<span class="menu-item-1">Art</span>
+	  		<i class="fa fa-angle-right"></i>
+	  	</a>
+  		<div class="list-group sub">
+  			<p class="lead first">Art</p>
+	    	<a href="#" class="list-group-item">Painting</a>
+	    	<a href="#" class="list-group-item">Sculpture</a>
+	    	<a href="#" class="list-group-item">Music</a>
+	    </div>
+
+	  	<a href="#" class="list-group-item">
+	  		<span class="menu-item-1">History</span>
+	  		<i class="fa fa-angle-right"></i>
+	 	</a>
+  		<div class="list-group sub">
+  			<p class="lead first">History</p>
+	    	<a href="#" class="list-group-item">Europe History</a>
+	    	<a href="#" class="list-group-item">Crusade wars history</a>
+	    	<a href="#" class="list-group-item">Old empires history</a>
+	    	<a href="#" class="list-group-item">History of Islam</a>
+	    </div>
+
+	  	<a href="#" class="list-group-item">
+	  		<span class="menu-item-1">Marketing</span>
+	  		<i class="fa fa-angle-right"></i>
+	 	</a>
+  		<div class="list-group sub">
+  			<p class="lead first">Marketing</p>
+	    	<a href="#" class="list-group-item">Priciples of Marketing</a>
+	    	<a href="#" class="list-group-item">Successful Businesses</a>
+	    	<a href="#" class="list-group-item">Market Management</a>
+	    </div>
+
+		</div>
+	</div>
+
+
+	<!-- <nav class="navbar" role="navigation">
+	<div class="container">
+    	<a class="navbar-brand" href="/">BAHAR</a>
+    	<ul class="nav navbar-nav">
+    		<li class="">
+    			<a href="#">Teach</a>
+    		</li>
+    		<li>
+    			<a href="#">About</a>
+    		</li>
+    	</ul>
+    	<ul class="nav navbar-nav pull-right">
+    		@if(!Auth::user())
+    		<li>
+    			<a href="/user/register" data-toggle="" data-target="#signUpModal"><i class="fa fa-user"></i> Sign Up</a>
+    		</li>
+    		<li>
+    			<a href="/user/login"><i class="fa fa-sign-in"></i> Login</a>
+    		</li>
+    		@else
+		      <li class="dropdown">
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+		              <span class="glyphicon glyphicon-user"></span> 
+		              <strong>Welcome</strong>
+		              <span class="glyphicon glyphicon-chevron-down"></span>
+		          </a>
+		          <ul class="dropdown-menu user-login-dropdown">
+		              <li>
+		                  <div class="navbar-login">
+		                      <div class="row">
+		                          <div class="col-lg-4">
+		                              <p class="text-center">
+		                                  <span class="glyphicon glyphicon-user icon-size"></span>
+		                              </p>
+		                          </div>
+		                          <div class="col-lg-8">
+		                              <p class="text-left"><strong>Nombre Apellido</strong></p>
+		                              <p class="text-left small">correoElectronico@email.com</p>
+		                              <p class="text-left">
+		                                  <a href="#" class="btn btn-primary btn-block btn-sm">Actualizar Datos</a>
+		                              </p>
+		                          </div>
+		                      </div>
+		                  </div>
+		              </li>
+		              <li class="divider"></li>
+		              <li>
+		                  <div class="navbar-login navbar-login-session">
+		                      <div class="row">
+		                          <div class="col-lg-12">
+		                              <p>
+		                                  <a href="/user/logout" class="btn btn-danger btn-block"><i class="fa fa-sign-out"></i> Logout</a>
+		                              </p>
+		                          </div>
+		                      </div>
+		                  </div>
+		              </li>
+		          </ul>
+		      </li>
+		      @endif
+    	</ul>
+    </div>
+	</nav> -->
+
+
+
+    @yield('content')
+
+  	<!-- Footer -->
+	<div class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-8 col-sm-offset-2 text-center">
+					<p class="lead">Follwo Us</p>
+					<i class="fa social fa-facebook"></i>
+					<i class="fa social fa-twitter"></i>
+					<i class="fa social fa-google-plus"></i>
+					<i class="fa social fa-youtube"></i>
+
+					<div class="row text-left top-margin">
+						<div class="col-sm-4">
+							<h4>BAHAR</h4>
+							<ul>
+								<li><a href="#">About</a></li>
+								<li><a href="#">Contact us</a></li>
+								<li><a href="#">Careers</a></li>
+							</ul>
+						</div>
+						<div class="col-sm-4">
+							<h4>Contribure</h4>
+							<ul>
+								<li><a href="#">Teach</a></li>
+								<li><a href="#">Suggest courses</a></li>
+								<li><a href="#">Partners</a></li>
+							</ul>
+						</div>
+						<div class="col-sm-4">
+							<h4>Contribute</h4>
+							<ul>
+								<li><a href="#">Blog</a></li>
+								<li><a href="#">Meetups</a></li>
+								<li><a href="#">News & Media</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr style="background-color:black;height:1px" />
+			<div class="row">
+				<div class="col-sm-6">
+				<p>
+					<a href="#">Privacy Policy</a> |
+					<a href="#">Terms</a> |
+					<a href="#">Help</a> |
+				</p>
+				</div>
+				<div class="col-sm-6 text-right">
+				<p>
+					&copy; Copyright 2014- BAHAR Organization <br/>
+					All Rights Reserved
+				</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Footer End -->
+
+  	<!-- Modal-Hamid -->
+	<div class="modal fade" id="modal-in">
+		<div class="modal-dialog">
+			<div class="tabbable">
+			  	<ul class="nav nav-tabs">
+			    	<li class="active text-center"><a href="#tab1" data-toggle="tab">Sign in</a></li>
+			    	<li class="text-center"><a href="#tab2" data-toggle="tab">Sign up</a></li>
+			  	</ul>
+			  	<div class="tab-content">
+			    	<div class="tab-pane active" id="tab1">
+			      		<div class="modal-content">
+							<div class="modal-body">
+								<form action="#" method="POST" role="form">
+									<div class="form-group">
+										<div class="input-group">
+										  	<span class="input-group-addon glyphicon glyphicon-user"></span>
+										  	<input type="text" class="form-control" placeholder="Username" name="uname" required>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="input-group">
+										  	<span class="input-group-addon glyphicon glyphicon-lock"></span>
+										  	<input type="password" class="form-control" placeholder="Password" name="password" required>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="checkbox">
+									  		<label>
+									  			<input type="checkbox" value="remember" name="remember" >
+									  			Remember me
+									  		</label>
+									  	</div>
+									</div>
+									<button type="submit" class="btn btn-primary">Sign in</button><br/>
+									<a href="#">forgot your password?</a>
+								</form>
+							</div>
+						</div><!-- /.modal-content -->
+			    	</div>
+			    	<div class="tab-pane" id="tab2">
+			    		<div class="modal-content">
+							<div class="modal-body">
+								<form action="#" method="POST" role="form">
+									<div class="form-group">
+										<div class="input-group">
+										  	<span class="input-group-addon glyphicon glyphicon-user"></span>
+										  	<input type="text" class="form-control" placeholder="Name" name="name" required>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="input-group">
+										  	<span class="input-group-addon glyphicon glyphicon-envelope"></span>
+										  	<input type="email" class="form-control" placeholder="Email" name="email" required>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="input-group">
+										  	<span class="input-group-addon glyphicon glyphicon-lock"></span>
+										  	<input type="password" class="form-control" placeholder="Password" name="password" required>
+										</div>
+									</div>
+									<div class="checkbox">
+										<label>
+											<input type="checkbox" value="agree" name="agree" checked="checked">
+											I agree to the <a href="#">Terms</a>
+										</label>
+									</div>
+									<button type="submit" class="btn btn-primary">Create Account</button>
+								</form>
+							</div>
+						</div><!-- /.modal-content -->
+			    	</div>
+			  	</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- End modal-Hamid -->
 
   	<!-- Modals on this page -->
 	<!-- Sign Up modal -->
@@ -99,7 +373,7 @@
 	<!-- Modal -->
 	<div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel" aria-hidden="true">
 	  <div class="modal-dialog">
-	    <div class="modal-content">       
+	    <div class="modal-content">
 	      <div class="modal-body">
 				  <div class="row">
 			        <div class="col-md-8 col-md-offset-2">
@@ -254,22 +528,73 @@
 			              <span class="help-block">By clicking Create my account, you agree to our Terms and that you have read our Data Use Policy, including our Cookie Use.</span>
 			                    <button class="btn btn-lg btn-primary btn-block signup-btn" type="submit">
 			                        Create my account</button>
-			            </form>          
+			            </form>
 			          </div>
-			</div>            
+			</div>
 			</div>
 	      </div>
 	    </div>
 	  </div>
 	</div>
 
+
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     {{ HTML::script('js/bootstrap.min.js'); }}
 
+    <!-- Smoothscroll -->
+    {{HTML::script('js/smoothscroll.js');}}
+
     <!-- Bootsnip JS -->
     {{ HTML::script('js/bootsnip.js'); }}
+
+
+	<script type="text/javascript">
+		$(function(){
+
+			function toggleNav() {
+			    if ($('#courses').hasClass('show-nav')) {
+			        // Do things on Nav Close
+			        $('#courses').removeClass('show-nav');
+			    } else {
+			        // Do things on Nav Open
+			        $('#courses').addClass('show-nav');
+			    }
+			}
+
+
+		    $('#menu').click(function() {
+		        // Calling a function in case you want to expand upon this.
+		        toggleNav();
+		    });
+
+		   /* $('*:not("#menu")').click(function() {
+		        if ($('#courses').hasClass('show-nav')) {
+		            // Assuming you used the function I made from the demo
+		            toggleNav();
+		        }
+
+		        toggleNav();
+		    });*/
+
+			$(document).keyup(function(e) {
+			    if (e.keyCode == 27) {
+			        if ($('#courses').hasClass('show-nav')) {
+			            // Assuming you used the function I made from the demo
+			            toggleNav();
+			        }
+			    }
+			});
+
+			//$(".menubar").waypoint('sticky' , {
+			//	offset:-200
+			//});
+		});
+
+	</script>
+
 
   </body>
 </html>
