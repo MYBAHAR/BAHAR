@@ -35,6 +35,12 @@
 			<strong>Error!</strong><br> {{ implode('', $errors->all('<li class="error">:message</li>')) }}
 		</div>
 		@endif
+		@if(Session::has('message'))
+		<div class="alert alert-danger col-md-6 col-md-offset-3">
+			<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+			{{ Session::get('message') }}
+		</div>
+		@endif
 		<div class="row omb_row-sm-offset-3">
 			<div class="col-xs-12 col-sm-6">	
 					<div class="input-group">

@@ -40,6 +40,7 @@
     @yield('header')
   </head>
   <body>
+<<<<<<< HEAD
 
   <div class="top-menu">
   	<div class="container">
@@ -63,6 +64,73 @@
   				</ul>
   			</div>
   		</div>
+=======
+    <nav class="navbar navbar-default" role="navigation">
+    	<div class="container">
+	    	<a class="navbar-brand" href="/">BAHAR</a>
+	    	<ul class="nav navbar-nav">
+	    		<li class="">
+	    			<a href="/teach/courses">Teach</a>
+	    		</li>
+	    		<li>
+	    			<a href="#">About</a>
+	    		</li>
+	    	</ul>
+	    	<ul class="nav navbar-nav pull-right">
+	    		@if(!Auth::user())
+	    		<li>
+	    			<a href="/user/register" data-toggle="" data-target="#signUpModal"><i class="fa fa-user"></i> Sign Up</a>
+	    		</li>
+	    		<li>
+	    			<a href="/user/login"><i class="fa fa-sign-in"></i> Login</a>
+	    		</li>
+	    		@else
+          <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <span class="glyphicon glyphicon-user"></span> 
+                  <strong>Welcome</strong>
+                  <span class="glyphicon glyphicon-chevron-down"></span>
+              </a>
+              <ul class="dropdown-menu user-login-dropdown">
+                  <li>
+                      <div class="navbar-login">
+                          <div class="row">
+                              <div class="col-lg-4">
+                                  <p class="text-center">
+                                      <span class="glyphicon glyphicon-user icon-size"></span>
+                                  </p>
+                              </div>
+                              <div class="col-lg-8">
+                                  <p class="text-left"><strong>Nombre Apellido</strong></p>
+                                  <p class="text-left small">correoElectronico@email.com</p>
+                                  <p class="text-left">
+                                      <a href="#" class="btn btn-primary btn-block btn-sm">Actualizar Datos</a>
+                                  </p>
+                              </div>
+                          </div>
+                      </div>
+                  </li>
+                  <li class="divider"></li>
+                  <li>
+                      <div class="navbar-login navbar-login-session">
+                          <div class="row">
+                              <div class="col-lg-12">
+                                  <p>
+                                      <a href="/user/logout" class="btn btn-danger btn-block"><i class="fa fa-sign-out"></i> Logout</a>
+                                  </p>
+                              </div>
+                          </div>
+                      </div>
+                  </li>
+              </ul>
+          </li>
+          @endif
+	    	</ul>
+	    </div>
+    </nav>
+    <div class="container">
+    	@yield('content')
+>>>>>>> 9d3ca1e736bc73f7712919dc58138e73d40a60f3
   	</div>
   </div>
   	

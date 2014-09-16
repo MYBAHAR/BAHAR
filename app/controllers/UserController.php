@@ -21,7 +21,7 @@ class UserController extends BaseController{
 			if(Auth::attempt($credentials)){
 				return Redirect::to('/');
 			} else {
-				return Redirect::to('/user/login');
+				return Redirect::to('/user/login')->withMessage('Wrong email/password combination, please try again!');
 			}
 		}
 	}

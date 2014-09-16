@@ -34,6 +34,7 @@ Route::get('/admin', function()
 	return View::make('admin.main');
 });
 
+<<<<<<< HEAD
 
 // Temporary Route to dashboard
 Route::get('/dashboard' , function(){
@@ -50,3 +51,7 @@ Route::get('/all' , function(){
 	return View::make('all-courses');
 });
 
+=======
+// User as a teacher
+Route::resource('/teach/courses', 'CourseController');
+>>>>>>> 9d3ca1e736bc73f7712919dc58138e73d40a60f3
