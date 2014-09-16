@@ -7,28 +7,28 @@
     <title>BAHAR | Elearning Made Easy</title>
 
     <!-- Bootstrap -->
-		{{ HTML::style('css/bootstrap.min.css'); }}
+	{{ HTML::style('css/bootstrap.min.css'); }}
 
-		<!-- Font Awesome -->
-		{{ HTML::style('font-awesome/css/font-awesome.min.css'); }}
+	<!-- Font Awesome -->
+	{{ HTML::style('font-awesome/css/font-awesome.min.css'); }}
 
-		<!-- Bootsnip CSS -->
-		{{ HTML::style('css/bootsnip.css'); }}
+	<!-- Bootsnip CSS -->
+	{{ HTML::style('css/bootsnip.css'); }}
 
-		<!-- Custom CSS -->
-		{{ HTML::style('css/custom.css'); }}
+	<!-- Custom CSS -->
+	{{ HTML::style('css/custom.css'); }}
 
-		<!-- Google Fonts -->
-		{{ HTML::style('http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto+Slab:700'); }}
+	<!-- Google Fonts -->
+	{{ HTML::style('http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto+Slab:700'); }}
 
-		<!-- Flexslider/css -->
-		{{HTML::style('css/flexslider.css');}}
+	<!-- Flexslider/css -->
+	{{HTML::style('css/flexslider.css');}}
 
-		<!-- Jquery -->
-		{{HTML::script('js/jquery.js');}}
+	<!-- Jquery -->
+	{{HTML::script('js/jquery.js');}}
 
-		<!-- Flexslider/Javascript -->
-		{{HTML::script('js/jquery.flexslider-min.js');}}
+	<!-- Flexslider/Javascript -->
+	{{HTML::script('js/jquery.flexslider-min.js');}}
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -40,7 +40,10 @@
     @yield('header')
   </head>
   <body>
+<!-- <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> 5f740f01877a596c3bdafe4ed652241822f091ba -->
 
   <div class="top-menu">
   	<div class="container">
@@ -64,7 +67,8 @@
   				</ul>
   			</div>
   		</div>
-=======
+<!-- <<<<<<< HEAD
+======= -->
     <nav class="navbar navbar-default" role="navigation">
     	<div class="container">
 	    	<a class="navbar-brand" href="/">BAHAR</a>
@@ -130,48 +134,17 @@
     </nav>
     <div class="container">
     	@yield('content')
->>>>>>> 9d3ca1e736bc73f7712919dc58138e73d40a60f3
+<!-- >>>>>>> 9d3ca1e736bc73f7712919dc58138e73d40a60f3
+=======
+>>>>>>> 5f740f01877a596c3bdafe4ed652241822f091ba -->
   	</div>
   </div>
-  	
 
-	
-	<!-- Menubar 
-	<div class="menubar">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-4">
-					<span class="glyphicon glyphicon-chevron-down"></span> 
-					<a id="menu">Courses</a>
-					
-					<div class="dropdown" title="Change Language">
-					  	<button class="btn dropdown-toggle transparent" type="button" id="dropdownMenu1" data-toggle="dropdown">
-					  	<span class="glyphicon glyphicon-globe"></span>&nbsp;&nbsp;
-					    En&nbsp;&nbsp;
-					    <span class="caret"></span>
-					  	</button>
-					  	<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-					    	<li role="presentation"><a role="menuitem" href="#">Dari</a></li>
-					    	<li role="presentation"><a role="menuitem" href="#">Spanish</a></li>
-					  	</ul>
-					</div>		
-				</div>
-				<div class="col-sm-4 text-center">
-					<h1><i class="fa fa-leaf logo"></i> BAHAR</h1>
-				</div>
-				<div class="col-sm-4 text-right">
-					<a href="#">How it works?</a>
-					<a class="btn transparent" data-toggle="modal" href='#modal-in'>Sign in / Sign up</a>
-				</div>
-			</div>
-		</div>
-	</div>
-	 End Menubar -->
 
 	<div class="courses" id="courses">
 		<div class="list-group">
 	  	<a href="#" class="list-group-item">
-		    <span class="menu-item-1">Computer Science</span> 
+		    <span class="menu-item-1">Computer Science</span>
 		    <i class="fa fa-angle-right"></i>
 		</a>
 	    <div class="list-group sub">
@@ -180,9 +153,9 @@
 	    	<a href="#" class="list-group-item">Information Technology</a>
 	    	<a href="#" class="list-group-item">Artificial Intelligence</a>
 	    </div>
-	  	
+
 	  	<a href="#" class="list-group-item">
-	  		<span class="menu-item-1">Medical Science</span> 
+	  		<span class="menu-item-1">Medical Science</span>
 		  	<i class="fa fa-angle-right"></i>
 		</a>
 		<div class="list-group sub">
@@ -192,7 +165,7 @@
 	    </div>
 
 	  	<a href="#" class="list-group-item">
-	  		<span class="menu-item-1">Math</span> 
+	  		<span class="menu-item-1">Math</span>
 	  		<i class="fa fa-angle-right"></i>
 	 	</a>
   		<div class="list-group sub">
@@ -201,7 +174,7 @@
 	    </div>
 
 	  	<a href="#" class="list-group-item">
-	  		<span class="menu-item-1">Economics</span> 
+	  		<span class="menu-item-1">Economics</span>
 	  		<i class="fa fa-angle-right"></i>
 	 	</a>
  		<div class="list-group sub">
@@ -212,7 +185,7 @@
 	    </div>
 
 	  	<a href="#" class="list-group-item">
-	  		<span class="menu-item-1">TOEFL Preparations</span> 
+	  		<span class="menu-item-1">TOEFL Preparations</span>
 	  		<i class="fa fa-angle-right"></i>
 	 	</a>
   		<div class="list-group sub">
@@ -225,7 +198,7 @@
 	    </div>
 
 	  	<a href="#" class="list-group-item">
-	  		<span class="menu-item-1">Art</span> 
+	  		<span class="menu-item-1">Art</span>
 	  		<i class="fa fa-angle-right"></i>
 	  	</a>
   		<div class="list-group sub">
@@ -234,9 +207,9 @@
 	    	<a href="#" class="list-group-item">Sculpture</a>
 	    	<a href="#" class="list-group-item">Music</a>
 	    </div>
-	 	
+
 	  	<a href="#" class="list-group-item">
-	  		<span class="menu-item-1">History</span> 
+	  		<span class="menu-item-1">History</span>
 	  		<i class="fa fa-angle-right"></i>
 	 	</a>
   		<div class="list-group sub">
@@ -248,7 +221,7 @@
 	    </div>
 
 	  	<a href="#" class="list-group-item">
-	  		<span class="menu-item-1">Marketing</span> 
+	  		<span class="menu-item-1">Marketing</span>
 	  		<i class="fa fa-angle-right"></i>
 	 	</a>
   		<div class="list-group sub">
@@ -260,8 +233,8 @@
 
 		</div>
 	</div>
-    
-    
+
+
 	<!-- <nav class="navbar" role="navigation">
 	<div class="container">
     	<a class="navbar-brand" href="/">BAHAR</a>
@@ -325,11 +298,11 @@
     	</ul>
     </div>
 	</nav> -->
-    
 
-    
+
+
     @yield('content')
-  	
+
   	<!-- Footer -->
 	<div class="footer">
 		<div class="container">
@@ -378,7 +351,7 @@
 					<a href="#">Help</a> |
 				</p>
 				</div>
-				<div class="col-sm-6 text-right">				
+				<div class="col-sm-6 text-right">
 				<p>
 					&copy; Copyright 2014- BAHAR Organization <br/>
 					All Rights Reserved
@@ -390,7 +363,7 @@
 	<!-- Footer End -->
 
   	<!-- Modal-Hamid -->
-	<div class="modal fade" id="modal-in">	
+	<div class="modal fade" id="modal-in">
 		<div class="modal-dialog">
 			<div class="tabbable">
 			  	<ul class="nav nav-tabs">
@@ -401,7 +374,7 @@
 			    	<div class="tab-pane active" id="tab1">
 			      		<div class="modal-content">
 							<div class="modal-body">
-								<form action="#" method="POST" role="form">							
+								<form action="#" method="POST" role="form">
 									<div class="form-group">
 										<div class="input-group">
 										  	<span class="input-group-addon glyphicon glyphicon-user"></span>
@@ -431,7 +404,7 @@
 			    	<div class="tab-pane" id="tab2">
 			    		<div class="modal-content">
 							<div class="modal-body">
-								<form action="#" method="POST" role="form">							
+								<form action="#" method="POST" role="form">
 									<div class="form-group">
 										<div class="input-group">
 										  	<span class="input-group-addon glyphicon glyphicon-user"></span>
@@ -463,7 +436,7 @@
 			    	</div>
 			  	</div>
 			</div>
-					
+
 		</div>
 	</div>
 	<!-- End modal-Hamid -->
@@ -474,7 +447,7 @@
 	<!-- Modal -->
 	<div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel" aria-hidden="true">
 	  <div class="modal-dialog">
-	    <div class="modal-content">       
+	    <div class="modal-content">
 	      <div class="modal-body">
 				  <div class="row">
 			        <div class="col-md-8 col-md-offset-2">
@@ -629,16 +602,16 @@
 			              <span class="help-block">By clicking Create my account, you agree to our Terms and that you have read our Data Use Policy, including our Cookie Use.</span>
 			                    <button class="btn btn-lg btn-primary btn-block signup-btn" type="submit">
 			                        Create my account</button>
-			            </form>          
+			            </form>
 			          </div>
-			</div>            
+			</div>
 			</div>
 	      </div>
 	    </div>
 	  </div>
 	</div>
 
-	
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -665,7 +638,7 @@
 			    }
 			}
 
-		
+
 		    $('#menu').click(function() {
 		        // Calling a function in case you want to expand upon this.
 		        toggleNav();
@@ -676,22 +649,22 @@
 		            // Assuming you used the function I made from the demo
 		            toggleNav();
 		        }
-		        
-		        toggleNav();		        
+
+		        toggleNav();
 		    });*/
-		
+
 			$(document).keyup(function(e) {
 			    if (e.keyCode == 27) {
 			        if ($('#courses').hasClass('show-nav')) {
 			            // Assuming you used the function I made from the demo
 			            toggleNav();
 			        }
-			    } 
-			});	
+			    }
+			});
 
 			//$(".menubar").waypoint('sticky' , {
 			//	offset:-200
-			//});	
+			//});
 		});
 
 	</script>
