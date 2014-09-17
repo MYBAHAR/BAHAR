@@ -244,9 +244,9 @@
 		</div>
 	</div>
 	<!-- End testimonials -->
-
+<br/><br/><br/>
 	<!-- Partners -->
-	<div class="partners">
+	<!-- <div class="partners">
 		<div class="container">
 			<div class="row text-center">
 				<h1 class="heading">Our Partners</h1>
@@ -268,7 +268,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<!-- Partners End -->
 
 
