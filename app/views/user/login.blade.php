@@ -45,13 +45,13 @@
 			<div class="col-xs-12 col-sm-6">	
 					<div class="input-group">
 						<span class="input-group-addon"><i class="fa fa-user"></i></span>
-						{{ Form::text('email', '', array('Placeholder' => 'Email address', 'class' => 'form-control')) }}
+						{{ Form::email('email', '', array('Placeholder' => 'Email address', 'class' => 'form-control','required')) }}
 					</div>
 					<span class="help-block"></span>
 										
 					<div class="input-group">
 						<span class="input-group-addon"><i class="fa fa-lock"></i></span>
-						{{ Form::Password('password', array('Placeholder' => 'Password', 'class' => 'form-control')) }}
+						{{ Form::Password('password', array('Placeholder' => 'Password', 'class' => 'form-control','required')) }}
 					</div><br>
 					{{ Form::submit('Login', array('class' => 'btn btn-lg btn-primary btn-block')) }}
 				</form>

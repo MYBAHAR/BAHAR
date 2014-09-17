@@ -34,13 +34,10 @@ Route::get('/admin', function()
 	return View::make('admin.main');
 });
 
-/*
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======*/
+
 // User as a teacher
 Route::resource('/teach/courses', 'CourseController');
-// >>>>>>> 5f740f01877a596c3bdafe4ed652241822f091ba
+
 
 // Temporary Route to dashboard
 Route::get('/dashboard' , function(){
@@ -56,11 +53,7 @@ Route::get('/course' , function(){
 Route::get('/all' , function(){
 	return View::make('all-courses');
 });
-/*<<<<<<< HEAD
 
-=======*/
 // User as a teacher
 Route::resource('/teach/courses', 'CourseController');
-// >>>>>>> 9d3ca1e736bc73f7712919dc58138e73d40a60f3
-// =======
-// >>>>>>> 5f740f01877a596c3bdafe4ed652241822f091ba
+

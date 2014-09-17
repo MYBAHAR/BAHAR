@@ -1,9 +1,36 @@
 @extends('layouts.default')
 
 @section('content')
+    <div class="teach-banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3 text-center" style="float:none;">
+                    <div class="teach-info">
+                        <h3>Become an instructor!</h3>                       
+                        <p>It’s easy, just click on create new course, prepare your material and start teaching!
+                        As more students you have, more money you can earn.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="teach-bar" style="margin-top:-4em;">
+        <div class="container">
+            <div class="row">
+                <ul>
+                    <li class="active"><a href="#">Dashboard</a></li>
+                    <li><a href="#">Students</a></li>
+                    <li><a href="#">Contributors</a></li>
+                    <li><a href="#">Resources</a></li>
+                    <li><a href="#">Activities</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<br/>
 	<div class="container">
     <h3>Courses</h3>
-    <hr>
     <p>You can add and maitain your courses here.
     <span class="pull-right"><a class="btn btn-default" href="/teach/courses/create"><i class="fa fa-plus"></i> Create a new Course</a></span>
     </p>
@@ -55,4 +82,6 @@
         </div>
     </div>
 </div>
+
+<br/><br/><br/>
 @stop

@@ -38,12 +38,10 @@
     <![endif]-->
 
     @yield('header')
+    
   </head>
   <body>
-<!-- <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 5f740f01877a596c3bdafe4ed652241822f091ba -->
+
 
   <div class="top-menu">
   	<div class="container">
@@ -53,8 +51,60 @@
   			</div>
   			<div class="col-xs-9">
   				<ul class="navbar-right menu">
-  					<li><a data-toggle="modal" href='#modal-in'>Create Account</a></li>
-  					<li><a data-toggle="modal" href='#modal-in'>Log in</a></li>
+  					<li><a href="/teach/courses">Teach</a></li>
+  					@if(!Auth::user())
+  					<li><a  href="/user/register">Create Account</a></li>
+  					<li><a  href="/user/login">Log in</a></li>
+  					@else
+  					<li class="dropdown">
+		              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+		                  <span class="glyphicon glyphicon-user"></span> 
+		                  <strong>Welcome</strong>
+		                  <b class="caret"></b>
+		              </a>
+
+		              <!-- <ul class="dropdown-menu user-login-dropdown">
+		                  <li>
+		                      <div class="navbar-login">
+		                          <div class="row">
+		                              <div class="col-lg-4">
+		                                  <p class="text-center">
+		                                      <span class="glyphicon glyphicon-user icon-size"></span>
+		                                  </p>
+		                              </div>
+		                              <div class="col-lg-8">
+		                                  <p class="text-left"><strong>Nombre Apellido</strong></p>
+		                                  <p class="text-left small">correoElectronico@email.com</p>
+		                                  <p class="text-left">
+		                                      <a href="#" class="btn btn-primary btn-block btn-sm">Actualizar Datos</a>
+		                                  </p>
+		                              </div>
+		                          </div>
+		                      </div>
+		                  </li>
+		                  <li class="divider"></li>
+		                  <li>
+		                      <div class="navbar-login navbar-login-session">
+		                          <div class="row">
+		                              <div class="col-lg-12">
+		                                  <p>
+		                                      <a href="/user/logout" class="btn btn-danger btn-block"><i class="fa fa-sign-out"></i> Logout</a>
+		                                  </p>
+		                              </div>
+		                          </div>
+		                      </div>
+		                  </li>
+		              </ul> -->
+
+		              	<ul class="dropdown-menu">
+							<li><a href="#"><i class="fa fa-check"></i> Manage Courses</a></li>
+							<li><a href="#"><i class="fa fa-folder"></i> Profile</a></li>
+							<li><a href="#"><i class="fa fa-gears"></i> Setting</a></li>
+							<li><a href="#"><i class="fa fa-graduation-cap"></i> Certificates</a></li>
+							<li><a href="/user/logout"><i class="fa fa-sign-out"></i> Sign out</a></li>
+						</ul>
+		          </li>
+		          @endif
   					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Language <b class="caret"></b></a>
 						<ul class="dropdown-menu">
@@ -63,83 +113,28 @@
 							<li><a href="#">Spanish</a></li>
 						</ul>
 					</li>
-					<li><a href="#">Courses <i class="fa fa-caret-square-o-down"></i></a></li>
+				
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Courses <i class="fa fa-caret-square-o-down"></i></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">TOEFL</a></li>
+							<li><a href="#">IELTS</a></li>
+							<li><a href="#">Computer Science</a></li>
+							<li><a href="#">Medical</a></li>
+							<li><a href="#">Art</a></li>
+							<li><a href="#">Math</a></li>
+							<li><a href="#">Painting</a></li>
+						</ul>
+					</li>
   				</ul>
   			</div>
   		</div>
-<!-- <<<<<<< HEAD
-======= -->
-    <nav class="navbar navbar-default" role="navigation">
-    	<div class="container">
-	    	<a class="navbar-brand" href="/">BAHAR</a>
-	    	<ul class="nav navbar-nav">
-	    		<li class="">
-	    			<a href="/teach/courses">Teach</a>
-	    		</li>
-	    		<li>
-	    			<a href="#">About</a>
-	    		</li>
-	    	</ul>
-	    	<ul class="nav navbar-nav pull-right">
-	    		@if(!Auth::user())
-	    		<li>
-	    			<a href="/user/register" data-toggle="" data-target="#signUpModal"><i class="fa fa-user"></i> Sign Up</a>
-	    		</li>
-	    		<li>
-	    			<a href="/user/login"><i class="fa fa-sign-in"></i> Login</a>
-	    		</li>
-	    		@else
-          <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <span class="glyphicon glyphicon-user"></span> 
-                  <strong>Welcome</strong>
-                  <span class="glyphicon glyphicon-chevron-down"></span>
-              </a>
-              <ul class="dropdown-menu user-login-dropdown">
-                  <li>
-                      <div class="navbar-login">
-                          <div class="row">
-                              <div class="col-lg-4">
-                                  <p class="text-center">
-                                      <span class="glyphicon glyphicon-user icon-size"></span>
-                                  </p>
-                              </div>
-                              <div class="col-lg-8">
-                                  <p class="text-left"><strong>Nombre Apellido</strong></p>
-                                  <p class="text-left small">correoElectronico@email.com</p>
-                                  <p class="text-left">
-                                      <a href="#" class="btn btn-primary btn-block btn-sm">Actualizar Datos</a>
-                                  </p>
-                              </div>
-                          </div>
-                      </div>
-                  </li>
-                  <li class="divider"></li>
-                  <li>
-                      <div class="navbar-login navbar-login-session">
-                          <div class="row">
-                              <div class="col-lg-12">
-                                  <p>
-                                      <a href="/user/logout" class="btn btn-danger btn-block"><i class="fa fa-sign-out"></i> Logout</a>
-                                  </p>
-                              </div>
-                          </div>
-                      </div>
-                  </li>
-              </ul>
-          </li>
-          @endif
-	    	</ul>
-	    </div>
-    </nav>
-    <div class="container">
-    	@yield('content')
-<!-- >>>>>>> 9d3ca1e736bc73f7712919dc58138e73d40a60f3
-=======
->>>>>>> 5f740f01877a596c3bdafe4ed652241822f091ba -->
   	</div>
   </div>
 
+    
+ 
+@yield('content')
 
 	<div class="courses" id="courses">
 		<div class="list-group">
@@ -234,74 +229,6 @@
 		</div>
 	</div>
 
-
-	<!-- <nav class="navbar" role="navigation">
-	<div class="container">
-    	<a class="navbar-brand" href="/">BAHAR</a>
-    	<ul class="nav navbar-nav">
-    		<li class="">
-    			<a href="#">Teach</a>
-    		</li>
-    		<li>
-    			<a href="#">About</a>
-    		</li>
-    	</ul>
-    	<ul class="nav navbar-nav pull-right">
-    		@if(!Auth::user())
-    		<li>
-    			<a href="/user/register" data-toggle="" data-target="#signUpModal"><i class="fa fa-user"></i> Sign Up</a>
-    		</li>
-    		<li>
-    			<a href="/user/login"><i class="fa fa-sign-in"></i> Login</a>
-    		</li>
-    		@else
-		      <li class="dropdown">
-		          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-		              <span class="glyphicon glyphicon-user"></span> 
-		              <strong>Welcome</strong>
-		              <span class="glyphicon glyphicon-chevron-down"></span>
-		          </a>
-		          <ul class="dropdown-menu user-login-dropdown">
-		              <li>
-		                  <div class="navbar-login">
-		                      <div class="row">
-		                          <div class="col-lg-4">
-		                              <p class="text-center">
-		                                  <span class="glyphicon glyphicon-user icon-size"></span>
-		                              </p>
-		                          </div>
-		                          <div class="col-lg-8">
-		                              <p class="text-left"><strong>Nombre Apellido</strong></p>
-		                              <p class="text-left small">correoElectronico@email.com</p>
-		                              <p class="text-left">
-		                                  <a href="#" class="btn btn-primary btn-block btn-sm">Actualizar Datos</a>
-		                              </p>
-		                          </div>
-		                      </div>
-		                  </div>
-		              </li>
-		              <li class="divider"></li>
-		              <li>
-		                  <div class="navbar-login navbar-login-session">
-		                      <div class="row">
-		                          <div class="col-lg-12">
-		                              <p>
-		                                  <a href="/user/logout" class="btn btn-danger btn-block"><i class="fa fa-sign-out"></i> Logout</a>
-		                              </p>
-		                          </div>
-		                      </div>
-		                  </div>
-		              </li>
-		          </ul>
-		      </li>
-		      @endif
-    	</ul>
-    </div>
-	</nav> -->
-
-
-
-    @yield('content')
 
   	<!-- Footer -->
 	<div class="footer">
@@ -614,7 +541,7 @@
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     {{ HTML::script('js/bootstrap.min.js'); }}
 
@@ -625,49 +552,7 @@
     {{ HTML::script('js/bootsnip.js'); }}
 
 
-	<script type="text/javascript">
-		$(function(){
-
-			function toggleNav() {
-			    if ($('#courses').hasClass('show-nav')) {
-			        // Do things on Nav Close
-			        $('#courses').removeClass('show-nav');
-			    } else {
-			        // Do things on Nav Open
-			        $('#courses').addClass('show-nav');
-			    }
-			}
-
-
-		    $('#menu').click(function() {
-		        // Calling a function in case you want to expand upon this.
-		        toggleNav();
-		    });
-
-		   /* $('*:not("#menu")').click(function() {
-		        if ($('#courses').hasClass('show-nav')) {
-		            // Assuming you used the function I made from the demo
-		            toggleNav();
-		        }
-
-		        toggleNav();
-		    });*/
-
-			$(document).keyup(function(e) {
-			    if (e.keyCode == 27) {
-			        if ($('#courses').hasClass('show-nav')) {
-			            // Assuming you used the function I made from the demo
-			            toggleNav();
-			        }
-			    }
-			});
-
-			//$(".menubar").waypoint('sticky' , {
-			//	offset:-200
-			//});
-		});
-
-	</script>
+	
 
 
   </body>

@@ -2,8 +2,8 @@
 
 @section('header')
 	<script type="text/javascript" charset="utf-8">
-	  	$(window).load(function() {
-	    	$('.flexslider').flexslider({
+	  	$(function(){
+	  		$('.flexslider').flexslider({
 	    		animation: "slide",
 	    		direction: "vertical",
 	    		controlNav: false,
@@ -21,7 +21,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-8 col-sm-offset-2 text-center">
-					<p class="welcome lead">Welcome to BAHAR online learning platform</p>
+					<h4 class="welcome">Welcome to BAHAR online learning platform</h4>
 					<p>
 						<a href="#"><i class="fa fa-lg fa-facebook-square"></i></a>
 						<a href="#"><i class="fa fa-lg fa-twitter-square"></i></a>
@@ -32,16 +32,16 @@
 					<div class="flexslider">
 					  	<ul class="slides">
 					    	<li>
-					      		Find a course
+					      		<p>Find a course</p>
 					    	</li>
 					    	<li>
-					      		Enroll and start learning
+					      		<p>Enroll and start learning</p>
 					    	</li>
 					    	<li>
-					      		Do assignments and pass the exam
+					      		<p>Do assignments and pass the exam</p>
 					    	</li>
 					    	<li>
-					      		Earn a certificate.
+					      		<p>Earn a certificate.</p>
 					    	</li>
 					  	</ul>
 					</div>

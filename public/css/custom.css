@@ -1,4 +1,4 @@
-body {background-color: #ebebeb;}
+body {background-color: #fff;}
 .top-menu {
 	background-color: black;
 	color: white;
@@ -11,7 +11,7 @@ body {background-color: #ebebeb;}
 
 ul.menu {margin-top: 20px;}
 
-ul.menu li {
+ul.menu li , .teach-bar ul li {
 	list-style-type: none;
 	display: inline;
 	margin: 0px 1em;
@@ -28,7 +28,7 @@ ul.menu li {
 
 .top-image a {color: black;}
 
-p.welcome {
+.welcome {
 	background-color: yellow;
 	padding: 5px;
 	display: inline-block;
@@ -41,7 +41,7 @@ div.item  {padding: 0px 100px;}
 .car-arrow {position: absolute;top: 50%;border: 2px solid white;padding: 0.5em;border-radius: 50px;}
 
 div.introductory {
-	background-color: #1093c4;
+	background-color: #03a9f4;
 	padding:2em 0px;
 }
 
@@ -137,7 +137,7 @@ div.testimonials ol.carousel-indicators li.active {
 }
 
 div.footer {
-	background-color: #e6e7e8;
+	background-color: #ebebeb;
 	padding: 3em 0px;
 	margin-bottom: 0px;
 }
@@ -186,7 +186,7 @@ div.footer ul {
 .bottom-margin {margin-bottom: 2em;}
 
 p {font-family: 'Open Sans Condensed', sans-serif;}
-h1 , h2 , h3 {font-family: 'Roboto Slab', serif !important;}
+h1 , h2 , h3 , h4 , h5 {font-family: 'Roboto Slab', serif !important;}
 
 
 /*////////////////////////SUBMENU///////////////////////////////*/
@@ -255,3 +255,31 @@ span.menu-item-1 {display: inline-block;width: 150px;}
 	padding: 5px;
 	margin: 10px 0px;
 }
+
+
+
+/*///////////////////// Teach.blade.php //////////////////*/
+.teach-banner {
+	margin-top: -60px;
+	background-image: url('../images/teach/banner.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.teach-info {
+	background-color: black;
+	padding: 2.5em;
+	border-radius: 30px;
+	margin: 11em 0px;
+	color: white;
+	opacity: 0.8;
+}
+
+.teach-bar {
+	background-color: #fff200;
+	padding: 1em 0px;
+}
+
+.teach-bar a {text-decoration: none;color: black;}
+.teach-bar li.active a {font-weight: 900;}
+.teach-bar ul {margin: 0px;padding: 0px;}
